@@ -36,5 +36,5 @@ let matrix = ["Sohel" , "Aaise" , "Faijan"];
 // Another way of passing callback function
 let anotherWay = (num) => {
     console.log(num);
-}
+}           
 matrix.forEach(anotherWay);

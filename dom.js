@@ -44,8 +44,8 @@ console.dir(obj3);
 //  Properties of DOM -- 
 
 // to print a tagName of element we use var.tagName()
-
-let nameOf = document.querySelector("p");
+ySelect
+let nameOf = document.getElementsByTagName("p");
 console.dir(nameOf);
 
 
@@ -54,4 +54,8 @@ console.dir(nameOf);
 // textContent -- it is similar to innerText but it also show the hidden element while innertext do not show it
 
 
-  
+
+
+// Some Other methods of DOM --
+
+
