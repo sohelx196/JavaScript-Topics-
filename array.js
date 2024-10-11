@@ -64,10 +64,12 @@ console.log(res);
 // It change in orignl array
 
 let myNum = [3,4,5,6,7,8,9];
+
+
 let edited = myNum.splice(1,2,29);
  // (index from change,how many index want to chnge , which num want to replace)
  console.log(myNum);
-
+ 
 
 // Some other methods -- 
 // * Shift method delete a single array element from start

@@ -53,3 +53,4 @@ let reduceArr = [3,3,3,3,1];
   return pre - curr;
 });
 console.log(outputNew); //It print a single value -7
+

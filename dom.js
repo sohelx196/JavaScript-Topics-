@@ -44,7 +44,6 @@ console.dir(obj3);
 //  Properties of DOM -- 
 
 // to print a tagName of element we use var.tagName()
-ySelect
 let nameOf = document.getElementsByTagName("p");
 console.dir(nameOf);
 
@@ -56,6 +55,53 @@ console.dir(nameOf);
 
 
 
-// Some Other methods of DOM --
+// Some attribute to access an element ---
+ 
+// How to get attribute value -- getAttribute() there are many attribute plz visit mdn
+
+ let nameOfPara = document.querySelector("h3");
+ console.log(nameOfPara.getAttribute("h3"));
 
 
+// change style by js
+let myBody = document.querySelector("body");
+myBody.style.backgroundColor =   "black";
+
+let para = document.querySelector("h3");
+para.style.color = "white";
+para.style.fontSize = "30px";
+
+
+// How to make element using JS
+
+let element = document.createElement("button");
+element.innerText = "Submit";
+console.log(element);
+// The button is created but does not shown in webpage
+// Ways to shown the js html tags in page -- 
+
+// 1) To add button in div (or node) in last we use -- append()
+  let appendEg = document.querySelector("#appendDiv");
+  appendEg.style.border = "2px solid white";
+  appendEg.append(element);
+
+  // 2) To add button in div (or node) in starting we use -- prepend()
+   appendEg.prepend(element);
+
+  // 3) To add button JUST before div (or node) but outside the div we use -- before()
+   appendEg.before(element);
+
+ // 4) To add button JUST after div  (or node) but outside the div we use -- after()
+     appendEg.after(element);
+
+
+// Note :: We can create any html element using these methods...
+
+// How to remove an element using JS
+
+let removePara = document.querySelector("h5");
+removePara.remove();
+ 
+
+
+// visit appendChild() and removeChild() method in mdn...
