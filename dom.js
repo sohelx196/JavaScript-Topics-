@@ -77,6 +77,12 @@ para.style.fontSize = "30px";
 let element = document.createElement("button");
 element.innerText = "Submit";
 console.log(element);
+
+let mybut = element.addEventListener("click" , () =>{
+  alert("Successfully Submited");
+});
+console.log(mybut);
+
 // The button is created but does not shown in webpage
 // Ways to shown the js html tags in page -- 
 
@@ -102,6 +108,5 @@ console.log(element);
 let removePara = document.querySelector("h5");
 removePara.remove();
  
-
 
 // visit appendChild() and removeChild() method in mdn...
