@@ -5,11 +5,19 @@
 
 
 const apiUrl = "https://cat-fact.herokuapp.com/facts";
-const getCatData = (async () => {
+
+let catFacts = document.querySelector("#catFact");
+let catBtn = document.querySelector("#mybut");
+
+const getCatData = async () => {
     let response = await fetch(apiUrl);
     console.log(response);  //It returns JSON format data and it is not understandable so we convert it into js object by using json() method
-     
+    
      let result = await response.json(); 
-     console.log(result);
-     
-})();
+     catFacts.innerText = result[2].text;
+   
+};
+
+catBtn.addEventListener("click", getCatData);
+
+// Now Explore about HTTP VERBS on mdn and also explore about Post Request on Mdn...(Have a Good Luck)
