@@ -137,7 +137,7 @@ function country(ParaOfCountry) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       console.log("The Data is :", ParaOfCountry);
-      resolve("Resolved");
+      resolve("Successfully Resolved!!!");
     }, 2000);
   });
 }
@@ -168,3 +168,5 @@ function country(ParaOfCountry) {
   console.log("Fetching Data From Server >>");
   await country("India");
 })();
+
+
