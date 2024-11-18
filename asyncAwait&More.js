@@ -133,14 +133,14 @@
 // Await is used to wait the promise until the promise it executed and stop the further operation until the current promise is completed
 // It can only be used inside an async function..
 
-function country(ParaOfCountry) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      console.log("The Data is :", ParaOfCountry);
-      resolve("Successfully Resolved!!!");
-    }, 2000);
-  });
-}
+// function country(ParaOfCountry) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("The Data is :", ParaOfCountry);
+//       resolve("Successfully Resolved!!!");
+//     }, 2000);
+//   });
+// }
 
 // country(2);  Wrong way to call
 // But We cannot call it directly else we need to wrap this function into a function
@@ -159,18 +159,32 @@ function country(ParaOfCountry) {
 // This Function Haven't any name.
 // Structure -->  (function)();
 
-(async function () {
-  //Now this is invoked Directly...
-  console.log("Getting Data From Server ...");
-  await country(2);
-  console.log("Getting Data From Server ...");
-  await country(3);
-  console.log("Fetching Data From Server >>");
-  await country("India");
+// (async function () {
+//   //Now this is invoked Directly...
+//   console.log("Getting Data From Server ...");
+//   await country(2);
+//   console.log("Getting Data From Server ...");
+//   await country(3);
+//   console.log("Fetching Data From Server >>");
+//   await country("India");
+// })();
+
+
+function GetUserInfo(name){
+  return new Promise((resolve,reject)=>{
+    setTimeout((res)=>{
+      console.log("Hello," , name);
+      resolve("Name Was Fetched");
+    },5000);
+  });
+};
+
+(async function() {
+  console.log("Fetching Data from server..");  
+  await GetUserInfo("Sohel Sheikh");
+    console.log("Fetching Data from server..");
+    await GetUserInfo("Rajat Jagtap");
+    console.log("Fetching Data from server..");
+    await GetUserInfo("Rohan Pawar");
+
 })();
-
-
-
-
-
-
