@@ -9,7 +9,6 @@ console.log(mystr.length);
 let laptop = {
     laptopName : prompt("Name of the Laptop :"),
     price : prompt("Enter your laptop price :"),
-    
 }
 
 let output = `The laptop ${laptop.laptopName} is very awesome whose price is Rs ${laptop.price}`;

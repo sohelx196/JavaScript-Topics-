@@ -64,12 +64,11 @@ eventLisBut.addEventListener("click" , (eventObjPassed) => {
 });
 
 
-
 // How to remove any eventListner -- node.removeEventListner()
 // Remember to remove any eventListner you need to have the same callBack function
 
-// Let we want to remove the 2nd event listner -- 
-//  firstly make its variable of the function
+// Let we want to remove the 2nd event listner -->
+//  firstly make its variable of the function                    
 
 
 const removed = () => {
@@ -77,5 +76,3 @@ const removed = () => {
 };
 eventLisBut.addEventListener("click" , removed);
 removed.removeEventListner("click" , removed);
-
-

@@ -169,22 +169,21 @@
 //   await country("India");
 // })();
 
-
-function GetUserInfo(name){
-  return new Promise((resolve,reject)=>{
-    setTimeout((res)=>{
-      console.log("Hello," , name);
+function GetUserInfo(name) {
+  return new Promise((resolve, reject) => {
+    setTimeout((res) => { 
+      console.log("Hello,", name);
       resolve("Name Was Fetched");
-    },5000);
+    }, 5000);
   });
-};
+}
 
-(async function() {
-  console.log("Fetching Data from server..");  
-  await GetUserInfo("Sohel Sheikh");
-    console.log("Fetching Data from server..");
-    await GetUserInfo("Rajat Jagtap");
-    console.log("Fetching Data from server..");
-    await GetUserInfo("Rohan Pawar");
+(async function () {
+   console.log("Fetching Data from server..");
+  await GetUserInfo("Code With Harry"); 
+   console.log("Fetching Data from server..");
+  await GetUserInfo("X"); 
+   console.log("Fetching Data from server..");
+  await GetUserInfo("Elon Musk"); 
+})();   // IIFE Function
 
-})();
