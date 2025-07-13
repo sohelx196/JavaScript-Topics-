@@ -23,7 +23,7 @@ newButton.onclick = (eventObject) => {
     console.log(eventObject);
     console.log(eventObject.type);
     console.log(eventObject.target); //Where the event occur..
-    console.log("This is horizontal location of event occurs :" ,eventObject.clientX);
+    console.log("This is horizontal location of event occurs :" , eventObject.clientX);
 }
 
 //we can use only one element to apply events by the above fuction way...

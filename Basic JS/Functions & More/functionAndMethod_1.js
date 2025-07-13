@@ -1,4 +1,31 @@
-// Function is a block of code which perform a particular task
+// Functions -->
+// Function is a block of code which perform a particular task...
+
+
+//  Ways of creating function -->
+
+   // 1) Using Normal Way..
+
+   function normal(){   // this way is called function declaration
+    console.log("byy world"); 
+   }
+
+
+   // 2) into any variable...(here variable name is the function name)
+        let add = function(){     //storing function into var is called function expression
+             console.log("Hello")
+        }
+       
+
+   // 3) using arrow function 
+     let arrowFun = ()=>{
+          console.log("This is arrow function")
+     }  
+     
+
+     
+
+
 
 function myName(){
     let name1 = "Sohel";
@@ -8,7 +35,8 @@ function myName(){
 myName();
 
 
-// Arrow Function => is a compact way of writing any function
+
+// Arrow Function => is a concise way of writing any function
 // We take an arrow function in a variable
 
                 //  passed parameter
@@ -20,6 +48,7 @@ arrowMulti(2 ,2);
     // passed argument
 
 
+    
 
 
  // The below is call back function BC a function is passed in another function

@@ -52,5 +52,5 @@ let reduceArr = [3,3,3,3,1];
  let outputNew = reduceArr.reduce((pre , curr) => {
   return pre - curr;
 });
-console.log(outputNew); //It print a single value -7
+console.log(outputNew); // It print a single value -7 
 
