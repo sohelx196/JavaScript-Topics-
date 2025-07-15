@@ -5,7 +5,7 @@
        
       let a = 10;
       function pureFunction(){
-        console.log(a);      //Here this function is not affecting the a value..
+        console.log(a);      // Here this function is not affecting the a value..
       }
 
 
