@@ -3,7 +3,7 @@
 
 // We use fetch() method to fetch data...
 
-const apiUrl = "https://cat-fact.herokuapp.com/facts";
+const apiUrl = "https://official-joke-api.appspot.com/random_joke";
 
 let catFacts = document.querySelector("#catFact");
 let catBtn = document.querySelector("#mybut");
