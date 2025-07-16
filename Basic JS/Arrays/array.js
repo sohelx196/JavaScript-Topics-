@@ -1,20 +1,13 @@
-
-let myarr = [23,21,42,53,29];
-console.log(myarr.length);
-
-console.log(myarr[3]); //print 53
-
-
-// To change element value using index
-let newArr = myarr[0] = 290;
-console.log(myarr);
-
+// Array holds many elements with different data type..
+ // In Array , each element has a index which is starts from 0..
 
 let newStrArr = ["sohel" , "faijan" , "aaise" , "tosif" , "aaftab"];
 for(let i=0;i<newStrArr.length;i++){
     console.log(newStrArr);
-
 }
+
+
+
 
 
 // Array methods
@@ -60,18 +53,26 @@ console.log(res);
 
 
 
-// 6. Splice Method -- is used to delete add or replace an element
+// 6. Splice Method -- is used to delete , add or replace an element
 // It change in orignl array
 
 let myNum = [3,4,5,6,7,8,9];
-
-
 let edited = myNum.splice(1,2,29);
  // (index from change,how many index want to chnge , which num want to replace)
  console.log(myNum);
  
 
-// Some other methods -- 
+// sort --> sort method will take a function and then return according to we want accending order or decending order...
+let sortArr = [23,42,43,2,3,4];
+let finalSort = sortArr.sort(function(a,b){
+    return b-a;         // If you run finalSort so you will get descending order..
+})
+
+
+
+
+
+// Some other methods -->
 // * Shift method delete a single array element from start
 // * unshift method add a single array element from start
 
