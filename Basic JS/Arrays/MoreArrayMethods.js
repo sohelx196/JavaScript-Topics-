@@ -15,7 +15,6 @@ let finalArr = foreachArr.forEach((val) => {
 
 
 
-
 // Map Method -->
 // it is used to create a new array
 
