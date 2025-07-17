@@ -1,4 +1,6 @@
- 
+//  Objects --> when you need to want info about one entity so you will use objects..
+
+
  let student = {
      studentName : "Sohel Sheikh",
      studentAddress : "Khandwa",
