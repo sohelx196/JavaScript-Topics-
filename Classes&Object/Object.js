@@ -1,4 +1,6 @@
-//  Objects --> when you need to want info about one entity so you will use objects..
+//  Objects -->  objects is a key value pair in which a key holds a value...
+// When you need to want info about one entity so you will use objects..
+
 
 
  let student = {
@@ -43,4 +45,23 @@ const arr2 = [5,6,7,8];
 console.log(...arr1 , ...arr2);
 
 
-//Access object using Rest Operator (Pack element)
+
+
+// Object destructuring =>
+     let food = {
+         foodName : "dal chalwal",
+         days : 22,
+         rating : 10,
+         dayName : {
+            monday : false,
+            tuesday : true,
+            wednesday : true,
+            thursday : true
+         }
+    };
+    let {monday,tuesday} = food.dayName;
+    console.log(monday)
+    
+
+
+
