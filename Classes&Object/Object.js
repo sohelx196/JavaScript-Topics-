@@ -27,7 +27,7 @@ console.log(student);
 
 
 
-// Access of Object using Spread Operator (Unpack element)
+// Copying Object using Spread Operator (Unpack element)
 let obj = {
     name : "Tiger",
     class : 10,
@@ -46,7 +46,9 @@ console.log(...arr1 , ...arr2);
 
 
 
-// Object destructuring means breaking the the actual part into small parts
+
+
+
 // Object destructuring =>
      let food = {
          foodName : "dal chalwal",
@@ -62,6 +64,58 @@ console.log(...arr1 , ...arr2);
     let {monday,tuesday} = food.dayName;
     console.log(monday)
     
+    
+    
+
+
+// Looping : for-in , Obeject.keys , Object.entries 
+
+// looping the object through for-in -->
+let myObj = {
+    FriendName : "Rohan Pawar",
+    Collage : "sdits",
+    Mobile : "9131440488",
+    Address : {
+        city : "khandwa"
+    }
+}
+
+for(let key in myObj){
+    console.log(key , ":" , myObj[key])
+}
+
+
+//  Obeject.keys --> 
+// when we want to make the keys of the object in the array..so we use Object.keys
+console.log(Object.keys(myObj))   // this will wrap the keys into arrays...
+
+
+// Object.entries -->
+// make the array of arrays...
+console.log(Object.entries(myObj))
+
+
+
+
+// Deep clone of objects ==>
+// A deep clone creates a completely new object with copied values of all nested objects, meaning changes in the cloned object do not affect the original.
+
+//  1. Using structuredClone(); ==>
+let newCopy = structuredClone(myObj);
+console.log(myObj.Address.city = "Indore");
+
+
+//  2. Using JSON methods ==>
+const original = {
+    name: "Sohel",
+    details: {
+    age: 21,
+    gender : "male"
+  }
+};
+
+let anotherCopy = JSON.parse(JSON.stringify(original));
+
 
 
 
