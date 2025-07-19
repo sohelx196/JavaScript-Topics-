@@ -46,7 +46,7 @@ console.log(...arr1 , ...arr2);
 
 
 
-
+// Object destructuring means breaking the the actual part into small parts
 // Object destructuring =>
      let food = {
          foodName : "dal chalwal",
