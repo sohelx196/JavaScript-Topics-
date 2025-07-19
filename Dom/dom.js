@@ -23,7 +23,7 @@ console.dir(obj3);
 
     //   Better Way to acces element is 4.) Query Selector -- In it we can pass the above 
     //   all selector which is id,class,tagName
-    // One element of html is called Node and 2 or more nodes are known as nodeList
+    //   One element of html is called Node and 2 or more nodes are known as nodeList
 
     // querySelector -- by tagName
     let giveOnlyFirstElement = document.querySelector("p");  // only give one element
