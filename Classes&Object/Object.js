@@ -119,3 +119,18 @@ let anotherCopy = JSON.parse(JSON.stringify(original));
 
 
 
+// Optional Chaining ==>
+    //  Optional chaining (?.) allows us to safely access deeply nested properties of an object without causing an error if any part is null or undefined.
+    
+const user = {
+  name: "Messi",
+  addressd: {
+    city: "Mars"
+  }
+};
+console.log(user?.address);     // not gives error cause we do optional chaining(?.)
+console.log(user?.address);     // not gives error cause we do optional chaining(?.)
+
+
+
+
