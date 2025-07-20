@@ -20,3 +20,21 @@ let footballer = {
 
 
 
+// Demo Example ==>
+let Name = "Student Name";
+let NameVal = prompt("Enter Your Name");
+
+let Address = "Student Address";
+let AddressVal = prompt("Enter Address");
+
+let Email = "Student Email";
+let emailVal = prompt("Enter Email");
+
+
+
+let studentDetails = {
+    [Name] : NameVal,
+    [Address] : AddressVal,
+    [Email]  : emailVal,     
+}
+console.log(studentDetails)

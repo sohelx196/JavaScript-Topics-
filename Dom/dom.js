@@ -1,11 +1,44 @@
 // DOM -- Document Object Model
+// DOM (Document Object Model) is a tree-like structure of our webpage — created by the browser from our HTML.
+
+// Example ==> 
+
+//   <body>
+//     <h1>Hello Sohel</h1>
+//     <button>Click Me</button>
+//   </body>
+
+// The browser turns this into a structure like:
+
+//   Document
+//     └── html
+//         └── body
+//             ├── h1
+//             │   └── "Hello Sohel"
+//             └── button
+//                 └── "Click Me"
+
+
+// *** JavaScript can access, change, add, or remove anything in this tree. That’s called DOM Manipulation.  *****
+
 
 // console.dir (print the special object properties)
-
 // Dom is used for dynamic changes on our web page
 
-// To access element in js there are some ways---
 
+
+
+
+
+
+
+
+
+
+
+
+
+// To access element in js there are some ways---
 // 1.) By Id --
  
 let obj = document.getElementById("heading");
@@ -109,4 +142,4 @@ let removePara = document.querySelector("h5");
 removePara.remove();
  
 
-// visit appendChild() and removeChild() method in mdn...
+// Visit appendChild() and removeChild() method in mdn...
