@@ -37,4 +37,5 @@ let studentDetails = {
     [Address] : AddressVal,
     [Email]  : emailVal,     
 }
-console.log(studentDetails)
+console.log(studentDetails);
+

@@ -43,12 +43,12 @@
 let obj = document.getElementById("heading");
 console.dir(obj);
 
-//  2.) By class -- it returns HtmlCollection
+//  2.) By class --> it returns HtmlCollection
 
 let obj2 = document.getElementsByClassName("myClass");
 console.dir(obj2);
 
-// 3 .) by tagName -- returns direct tag
+// 3 .) by tagName --> returns direct tag
 
 let obj3 = document.getElementsByTagName("p");
 console.dir(obj3);
@@ -143,6 +143,7 @@ console.log(mybut);
 
 let removePara = document.querySelector("h5");
 removePara.remove();
- 
+
+
 
 // Visit appendChild() and removeChild() method in mdn...
