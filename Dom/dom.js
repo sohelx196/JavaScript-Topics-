@@ -21,8 +21,7 @@
 
 
 
-// *** JavaScript can access, change, add, or remove anything in this tree. That’s called DOM Manipulation.
-
+// *** JavaScript can access, change, add, or remove anything in this tree. That’s called DOM Manipulation. ***
 
 
 
