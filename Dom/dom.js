@@ -1,5 +1,6 @@
 // DOM -- Document Object Model
 // DOM (Document Object Model) is a tree-like structure of our webpage — created by the browser from our HTML.
+// Dom is used for dynamic changes on our web page
 
 // Example ==> 
 
@@ -19,11 +20,11 @@
 //                 └── "Click Me"
 
 
-// *** JavaScript can access, change, add, or remove anything in this tree. That’s called DOM Manipulation.  *****
 
+// *** JavaScript can access, change, add, or remove anything in this tree. That’s called DOM Manipulation.
 
 // console.dir (print the special object properties)
-// Dom is used for dynamic changes on our web page
+
 
 
 
@@ -54,8 +55,12 @@ console.dir(obj2);
 let obj3 = document.getElementsByTagName("p");
 console.dir(obj3);
 
-    //   Better Way to acces element is 4.) Query Selector -- In it we can pass the above 
-    //   all selector which is id,class,tagName
+
+
+
+    //   Better Way to acces element is ==>
+    
+    //   4.) Query Selector -- In it we can pass the above all selector which is id,class,tagName
     //   One element of html is called Node and 2 or more nodes are known as nodeList
 
     // querySelector -- by tagName
