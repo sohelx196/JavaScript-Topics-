@@ -23,19 +23,20 @@
 
 // *** JavaScript can access, change, add, or remove anything in this tree. That’s called DOM Manipulation.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 // console.dir (print the special object properties)
-
-
-
-
-
-
-
-
-
-
-
-
 
 // To access element in js there are some ways---
 // 1.) By Id --

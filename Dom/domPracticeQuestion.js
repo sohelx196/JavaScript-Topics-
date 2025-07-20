@@ -6,4 +6,4 @@ console.dir(hiddenEle.textContent); //Here hidden element also visible with the 
 
 domAccess.innerHTML = domAccess.innerHTML + "Sohel Sheikh";
 
-console.log(domAccess.innerHTML); //Value was changed
+console.log(domAccess.innerHTML); // value was changed
