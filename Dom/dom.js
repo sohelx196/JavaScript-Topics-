@@ -149,6 +149,13 @@ let abcd = document.querySelector("#myWork" )
  abcd.textContent = "New Work"
 
 
-// Attribute Manipulation -->
+// Attribute Manipulation --> (meaning changing the value of the html attribute)
 // getAttribute , setAttribute , removeAttribute :
 
+
+let a = document.querySelector("a");  
+a.setAttribute("href" , "https://sohelsheikh29.netlify.app")  // here we changed the attribute value using setAttribute...
+
+let myInput = document.querySelector("#input");
+myInput.removeAttribute("name")
+console.dir(myInput)
