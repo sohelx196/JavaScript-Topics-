@@ -15,21 +15,13 @@
 //     └── html
 //         └── body
 //             ├── h1
-//             │   └── "Hello Sohel"
+//             │   └── "Hello,Sohel"
 //             └── button
 //                 └── "Click Me"
 
 
 
 // *** JavaScript can access, change, add, or remove anything in this tree. That’s called DOM Manipulation. ***
-
-
-
-
-
-
-
-
 
 
 
@@ -66,7 +58,7 @@ console.dir(obj3);
     console.dir(giveOnlyFirstElement);
 
     //  querySelectorAll  -- by tagName
-    let givesAllElement = document.querySelectorAll("p"); //gives all element
+    let givesAllElement = document.querySelectorAll("p"); //gives all element in a nodeList
     console.dir(givesAllElement);
 
 
@@ -85,8 +77,8 @@ console.dir(nameOf);
 
 
 // innerText -- print only text of the Dom Element
-// innerHTML -- print text with tag 
 // textContent -- it is similar to innerText but it also show the hidden element while innertext do not show it
+// innerHTML -- print text with tag (or we can change the html tag using it)
 
 
 
@@ -147,3 +139,16 @@ removePara.remove();
 
 
 // Visit appendChild() and removeChild() method in mdn...
+
+
+
+
+
+// Testing Code Starts ==>
+let abcd = document.querySelector("#myWork" )
+ abcd.textContent = "New Work"
+
+
+// Attribute Manipulation -->
+// getAttribute , setAttribute , removeAttribute :
+
