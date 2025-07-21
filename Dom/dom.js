@@ -144,18 +144,25 @@ removePara.remove();
 
 
 
-// Testing Code Starts ==>
+
+// Testing Code Starts ==> 
 let abcd = document.querySelector("#myWork" )
  abcd.textContent = "New Work"
 
 
+
 // Attribute Manipulation --> (meaning changing the value of the html attribute)
-// getAttribute , setAttribute , removeAttribute :
+// setAttribute , removeAttribute , getAttribute
 
-
+// setAttribute set the value of the attribute 
 let a = document.querySelector("a");  
 a.setAttribute("href" , "https://sohelsheikh29.netlify.app")  // here we changed the attribute value using setAttribute...
 
+// removeAttribute remove the value of the attribute
 let myInput = document.querySelector("#input");
 myInput.removeAttribute("name")
 console.dir(myInput)
+
+// getAttribute can get the value of the attribute
+let getAttributes = document.querySelector("#myPortfolio");
+console.log(getAttributes.getAttribute("href"));
