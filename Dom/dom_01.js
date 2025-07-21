@@ -108,7 +108,7 @@ console.log(element);
 
 let mybut = element.addEventListener("click" , () =>{
   alert("Successfully Submited");
-});
+}); 
 console.log(mybut);
 
 // The button is created but does not shown in webpage
@@ -138,7 +138,6 @@ removePara.remove();
 
 
 
-// Visit appendChild() and removeChild() method in mdn...
 
 
 
@@ -166,3 +165,8 @@ console.dir(myInput)
 // getAttribute can get the value of the attribute
 let getAttributes = document.querySelector("#myPortfolio");
 console.log(getAttributes.getAttribute("href"));
+
+
+
+
+
