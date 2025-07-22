@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // Synchronous Programming -->     
  // The execution will be held in a sequence which is called Syncronous Programming
 console.log("Hello1"); //executed in a sequemce one by one
@@ -7,12 +7,12 @@ console.log("Hello2"); //executed i
 
 
 console.log("Hello3"); //executed in a sequemce one by one
-=======
+
 // Synchronous Programming -->
 // The execution will be held in a sequence which is called Syncronous Programming
 // console.log("Hello1"); //executed in a sequemce one by one
 // console.log("Hello2"); //executed i
->>>>>>> 640df823185812bf9faff1b207f6b39fed82950b
+
 
 // console.log("Hello3"); //executed in a sequemce one by one
 
@@ -24,7 +24,7 @@ console.log("Hello3"); //executed in a sequemce one by one
 // }
 // setTimeout(()=>{
 //     console.log("This is async");
-<<<<<<< HEAD
+
 // } , 5000); //So the function is showed after 5 sec where 1000 = 1s 
      //(Function name , timeOfDealy)
  
@@ -35,19 +35,17 @@ console.log("Hello3"); //executed in a sequemce one by one
 // CallBack Function ==> 
     // function which is passed into another function..
     // The above method (setTimeout) also takes a callback
-=======
+
 // } , 5000); //So the function is showed after 5 sec where 1000 = 1s
 //(Function name , timeOfDealy)
 
 // CallBack Function ==>
 // function which is passed into another function..
 // The above method (setTimeout) also takes a callback
->>>>>>> 640df823185812bf9faff1b207f6b39fed82950b
 
 // CallBack Hell
 // When we call a callback into another call back and this is going on then it is called callback hell
 
-<<<<<<< HEAD
     // CallBack Hell  
     // When we call a callback into another call back and this is going on then it is called callback hell
 
@@ -129,7 +127,7 @@ promise.catch((err) => {
 
 
 
-=======
+
 // function getName(userId , getSecondUser){
 //     setTimeout(()=>{
 //         console.log("Sohel Sheikh" , userId);
@@ -138,7 +136,7 @@ promise.catch((err) => {
 //         }
 //     },1000);
 // }
->>>>>>> 640df823185812bf9faff1b207f6b39fed82950b
+
 
 // The Below are called callback Hell (nested function). To solve this problem we use the concept of Promises
 // getName(1 , ()=>{

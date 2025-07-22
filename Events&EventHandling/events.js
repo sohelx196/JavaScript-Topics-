@@ -1,5 +1,6 @@
-
 // Events In js...
+
+
 // Node.EventName (like onclick , onblur etc);
 
 let button = document.querySelector("#myButton"); 
