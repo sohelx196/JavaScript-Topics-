@@ -23,13 +23,25 @@
 
 
 
-// Common types of addEventListner :
-    // input , click , dblclick etc..
+// Common events :
+    // input , click , dblclick  , change , submit , mouseover , keyup etc..
    
-    // input --> can be used to check the events of input fields
+    // input event --> can be used to check the events of input fields
     let myInput = document.querySelector("#myInput");
     myInput.addEventListener("input" , (val)=> {
         if(val.data !== null){
             console.log(val.data)
         }
+    })  
+
+
+    // change event --> The change event occurs when the value of an input, select, or textarea element changes.
+
+    let select = document.querySelector("#select");
+    let status = document.querySelector("#status");
+    select.addEventListener("change" , (goat)=>{
+        status.textContent = `${goat.target.value} is Selected`
     })
+
+
+    

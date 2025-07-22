@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Button</title>
+    <style>
+        input{
+            display:none;
+        }
+        #upload{
+            border: 2px solid;
+            width: max-content;
+            padding: 10px;
+            border-radius: 10px;
+            background-color:brown;
+            color: azure;
+            
+        }
+        #upload:hover{
+            background-color:crimson;
+            cursor: pointer;
+        }
+
+        .myDiv{
+            height: 100%;
+            width: 100%;
+            flex:content;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+            flex-direction: column;
+        }
+
+    </style>
+</head>
+<body style="background-color: black; color: wheat;">
+    
+    <input id="file" type="file">
+    <div class="myDiv">
+        <div id="upload">
+           Upload
+       </div>
+    </div>
+   
+    <script src="Upload.js"></script>
+</body>
+</html>
