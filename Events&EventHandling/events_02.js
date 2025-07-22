@@ -23,3 +23,13 @@
 
 
 
+// Common types of addEventListner :
+    // input , click , dblclick etc..
+   
+    // input --> can be used to check the events of input fields
+    let myInput = document.querySelector("#myInput");
+    myInput.addEventListener("input" , (val)=> {
+        if(val.data !== null){
+            console.log(val.data)
+        }
+    })
