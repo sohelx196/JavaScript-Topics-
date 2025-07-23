@@ -5,3 +5,7 @@ upload.addEventListener("click" , ()=>{
      file.click();
 })
 
+file.addEventListener("change" , (val)=>{
+     console.log(val);
+})
+
