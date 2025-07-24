@@ -1,2 +1,2 @@
 Handwritten notes from basics to advanced...
-Made with ❤ by Sohel 😊
+Made with ❤ by Sohel Sheikh😊
