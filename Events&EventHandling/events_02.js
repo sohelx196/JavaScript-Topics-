@@ -45,3 +45,8 @@
 
 
     
+    // submit event ==>  it is used when the form is submitted and we want do something with that..(when the form is submitted so the form is reload always so we can stop it also)
+    
+    // go through the  mini feature folder for mini sumit project :)
+
+    

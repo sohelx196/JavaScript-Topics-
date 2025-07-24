@@ -30,6 +30,3 @@ textarea.addEventListener("input" , ()=>{
 })
 
 
-
-// Password field js -->
-
