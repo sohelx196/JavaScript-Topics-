@@ -10,21 +10,21 @@ form.addEventListener("submit" , (detail)=>{
     let card = document.createElement("div")
     card.classList.add("card");
 
-    let profile = document.querySelector("div");
+    let profile = document.createElement("div");
     profile.classList.add("profile");
 
 
     let image = document.createElement("img");
-    image.setAttribute("src" , "https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D");
+    image.setAttribute("src" , inputs[0].value);
 
     let h1 = document.createElement("h1");
-    h1.textContent = "Sohel Sheikh";
+    h1.textContent = inputs[1].value;
 
     let job = document.createElement("p");
-    job.textContent = "Coder";
+    job.textContent = inputs[2].value;
 
     let email = document.createElement("p");
-    email.textContent = "sohel@gmail.com";
+    email.textContent = inputs[3].value;
 
     
     profile.appendChild(image);
@@ -34,7 +34,14 @@ form.addEventListener("submit" , (detail)=>{
     card.appendChild(job);
     card.appendChild(email);
 
-    myForm.appendChild(card)
+    myForm.appendChild(card);
+
+    // blank value after submit
+    inputs.forEach((inpt)=>{
+        if(inpt.type !== "submit"){
+            inpt.value = "";
+        }
+    })
     
 });
 
