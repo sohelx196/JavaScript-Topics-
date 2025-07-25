@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact App</title>
+
+    <style>
+        .form{
+            border: 1px solid wheat;
+            padding: 10px;
+       
+        }
+        section{
+            height: 100%;
+            width: 100%;
+            justify-content: center;
+            flex: content;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        #newInput{
+            border: 1px solid bisque;
+            height: fit-content;
+            width: max-content;
+            background-color: red;
+            padding: 4px;
+            border-radius: 5px;
+            align-items: center;
+            flex: auto;
+            flex-direction: column;
+            text-align: center;
+          
+        }
+
+        #defaultFile{
+            display: none;
+        }
+
+        input{
+            padding: 10px;
+            
+        }
+    </style>
+
+</head>
+<body style="background-color: black; color: white;">
+
+
+    <section class="main">
+        <h1>Save Contacts Quickly </h1>
+        <div class="form">
+            <form action="">
+
+                <input id="defaultFile" type="file">
+                <div id="newInput">
+                   Image Upload
+                </div>
+
+                <input type="text" placeholder="Contact Name">
+                <input type="number" placeholder="Enter Number">
+                <input type="submit">
+            </form>
+        </div>
+    </section>
+
+    <script src="Contact.js"></script>
+</body>
+</html>

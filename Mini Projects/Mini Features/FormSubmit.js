@@ -41,8 +41,10 @@ form.addEventListener("submit" , (detail)=>{
         if(inpt.type !== "submit"){
             inpt.value = "";
         }
-    })
+    });
     
+    
+
 });
 
 

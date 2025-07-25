@@ -7,7 +7,8 @@ upload.addEventListener("click" , ()=>{
 
 file.addEventListener("change" , (val)=>{
    upload.textContent = val.target.files[0].name;
-})
+});
+
 
 
 
