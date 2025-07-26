@@ -24,7 +24,7 @@
 
 
 // Common events :
-    // input , click , dblclick  , change , submit , mouseover , keyup etc..
+    // *** input , click , dblclick  , change , submit , mouseover , keyup etc.. ***
    
     // input event --> can be used to check the events of input fields
     let myInput = document.querySelector("#myInput");
@@ -59,6 +59,5 @@
     
     // keyup ==> keyup fires when you release a key on the keyboard.
     // (google it)
-
 
     
