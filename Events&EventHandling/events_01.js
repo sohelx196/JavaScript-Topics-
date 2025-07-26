@@ -77,3 +77,4 @@ const removed = () => {
 };
 eventLisBut.addEventListener("click" , removed);
 removed.removeEventListner("click" , removed);
+
