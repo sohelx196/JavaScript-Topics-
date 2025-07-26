@@ -12,4 +12,11 @@ form.addEventListener("submit" , (val)=>{
      document.querySelector("#msg").style.display  = "none"
    }
 
-})
+});
+
+
+// pattern attribute & custom regix 
+   //   (chatgpt it)
+
+
+   

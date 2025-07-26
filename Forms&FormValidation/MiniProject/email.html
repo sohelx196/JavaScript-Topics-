@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form</title>
+  <style>
+    body {
+      background: #f3f4f6;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      border: 1px solid #555;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 350px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #2563eb;
+    }
+
+    .error {
+      color: #dc2626;
+      font-size: 14px;
+      margin-top: 5px;
+      display: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #1e40af;
+    }
+  </style>
+</head>
+<body style="background-color: black;color: white;">
+
+  <div class="form-container">
+    <h2>Login</h2>
+
+    <form autocomplete="off"> 
+      <div class="form-group">
+        <label for="username">Email</label>
+        <input type="email" id="email" >
+        <div id="emailError" class="error"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password">
+        <div id="passwordError" class="error"></div>
+      </div>
+
+      <button type="submit">Login</button>
+    </form>
+    
+  </div>
+
+  <script src="emailPassValidator.js"></script>
+</body>
+</html>
