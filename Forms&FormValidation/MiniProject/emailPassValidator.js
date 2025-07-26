@@ -25,9 +25,7 @@ form.addEventListener("submit" , (val)=>{
     if(!passwordAns){
         document.querySelector("#passwordError").textContent = "Password have at least 1 letter , at least 1 number , at least 1 special character (/, @, *) , minimum 6 character"
 
-        document.querySelector("#passwordError").style.display = "initial"
+        document.querySelector("#passwordError").style.display = "initial";
     }
-
-    
 
 })
