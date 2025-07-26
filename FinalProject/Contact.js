@@ -14,4 +14,7 @@ defaultFile.addEventListener("change",(val)=>{
 
 
 
-let main = documen.querySelector
+let inputs = document.querySelector("input");
+inputs.addEventListener("input" , (val)=>{
+   console.log(val)
+});
