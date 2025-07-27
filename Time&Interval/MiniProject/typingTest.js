@@ -7,5 +7,5 @@ let time = document.querySelector("#timer");
 let result = document.querySelector("#result");
 
 startBtn.addEventListener("click" , ()=>{
-    typingBox
+   console.log(typingBox) 
 })
