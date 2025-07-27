@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bar</title>
+    <style>
+        .progress-container {
+  width: 100%;
+  max-width: 500px;
+  height: 25px;
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 50px auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #4caf50;
+  transition: width 0.1s linear;
+  border-radius: 20px;
+}
+
+#progressPercent {
+  text-align: center;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+    </style>
+</head>
+<body style="background-color: black; color: white;">
+    
+
+<div class="progress-container">
+  <div class="progress-bar" id="progressBar"></div>
+</div>
+<p id="progressPercent">PROGRESS : <span>0%</span></p>
+
+
+</body>
+</html>

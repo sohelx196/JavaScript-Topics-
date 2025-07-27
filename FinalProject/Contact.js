@@ -13,7 +13,6 @@ defaultFile.addEventListener("change",(val)=>{
 
 
 
-
 let inputs = document.querySelector("input");
 inputs.addEventListener("input" , (val)=>{
    console.log(val)
