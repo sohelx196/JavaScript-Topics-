@@ -12,12 +12,13 @@
     },2000)
 
 
+
     // clearTimeout => Stops a scheduled setTimeout() before it runs.
    let clearTime = setTimeout(()=>{
        console.log("This is clearTimeout");
     },5000)
 
-      clearTimeout(clearTime) 
+      clearTimeout(clearTime)
       
       
     // clearInterval => stop a scheduled setInterval() before it runs
@@ -28,3 +29,5 @@
     clearInterval(clearInter);
  
     
+
+   
