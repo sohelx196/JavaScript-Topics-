@@ -18,7 +18,7 @@ let clearInt = setInterval(() => {
     progressPercent.textContent = "Completed 😊";
   }
 }, 30)
-
+ 
 },2000);
  
-// here the setTimeout can delay the whole progress for 2 seconds...
+// here , the setTimeout can delay the whole setInterval for 2 seconds...  
