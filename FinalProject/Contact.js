@@ -20,7 +20,7 @@ form.addEventListener("submit" , (val)=>{
    cards.push(card);
    localStorage.setItem("cards" , JSON.stringify(cards));
    
-   showcard(card)
+   showcard(card);
 
 
    inputs.forEach((inp)=>{
@@ -29,7 +29,7 @@ form.addEventListener("submit" , (val)=>{
       }
    });
    
-})
+});
 
 
 window.addEventListener("DOMContentLoaded" , ()=>{
@@ -38,6 +38,7 @@ window.addEventListener("DOMContentLoaded" , ()=>{
       showcard(card)
    })
 })
+
 
 
 // card is here
@@ -49,13 +50,13 @@ function showcard(data){
    profiles.classList.add("profile");
 
    let image = document.createElement("img");
-   image.setAttribute("src" , inputs[0].value);
+   image.setAttribute("src" , data.image);
 
    let footBaller = document.createElement("h3");
-   footBaller.textContent =  inputs[1].value;
+   footBaller.textContent =  data.name;
 
    let contact = document.createElement("p");
-   contact.textContent =  inputs[2].value;
+   contact.textContent =  data.contact;
 
 
    profiles.appendChild(image);
