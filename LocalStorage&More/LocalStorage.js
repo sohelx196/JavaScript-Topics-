@@ -12,6 +12,8 @@
 // localStorage -->
     //  store (setItem) , fetch (getItem) , remove (removeItem) and update (setItem) , clear (used to clear all data of localstorage) data 
 
+// **** we cannot store array , object in localstorage but we store it using string but when we get the data so hame string ke form me data milta hai, to string se use apne natural form me lane ke liye hum use json.parse kr dete hai to array apne natural form me aa jata hai ****
+
 // to store or set the data to the browser we use localStorage.setItem() to store data
 
 localStorage.setItem("name" , "sohel");
@@ -40,5 +42,25 @@ console.log(val);
 
 
 
- 
+
+// cookies -->
+   // used to store ~4kb data where localStorage and sessionStorage is used to store ~5mb data...
+   // it will also  stay after the browser is closed
+
+   document.cookie = "name = sohel"    // structure of making cookie   (use editThisCookie extension to see the stored cookie)
+
+
+
+
+
+
+
+// *** locastorage me array ke form me data store karna ==>
+
+    localStorage.setItem("Footballer" , JSON.stringify(["Messi" , "Neymar" , "Salah"]));
+    let friend = JSON.parse(localStorage.getItem("Footballer"))
+    console.log(friend)      // Now we got the array form...
+
+
+
 
