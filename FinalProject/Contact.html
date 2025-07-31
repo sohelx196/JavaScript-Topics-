@@ -35,7 +35,9 @@
         input{
             padding: 10px;
             border-radius:10px;
-            border: 2px solid black;
+            border: 2px solid rgb(92, 112, 119);
+            background-color: transparent;
+            color: lightblue;
             
         }
 
@@ -60,10 +62,9 @@
             width: 80px;
             border-radius: 10px;
             text-align: center;
-
-
-     
         }
+
+        
 
         .profile img{
            width: 100%;
@@ -82,10 +83,12 @@
              color: white;
              border:1px solid dimgray;
              margin-right: 10px;
-        }
-        .deleteBtn:hover{
-            background-color: darkred;
+              background-color: darkred;
             transition: all 0.2s;
+           
+        }
+
+        .deleteBtn:hover{
             border: 1px solid white;
         }
 
@@ -98,11 +101,16 @@
         }
         
         #formDiv{
-            background-color: aqua;
-            color: black;
+            background-color:rgb(14, 13, 13);
+            color:lightblue;
             border-radius: 10px;
             padding: 20px;
-
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            
         }
 
 .contact-container {
@@ -125,9 +133,9 @@
             <h1 style="font-size: xx-large; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">QuickSave</h1>
                    
             <form  action="">
-                <input type="text" placeholder="Enter Url" required>
+                <input type="text" placeholder=" Image Url" required>
                 <input type="text" placeholder="Contact Name" required>
-                <input type="text" placeholder="Enter Number" required>
+                <input type="text" placeholder="Phone Number" required>
                 <input type="submit">
             </form>
         </div>
