@@ -37,7 +37,7 @@ window.addEventListener("DOMContentLoaded" , ()=>{
    cards.forEach((card)=>{
       showcard(card)
    })
-})
+});
 
 
 
