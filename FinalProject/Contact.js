@@ -6,38 +6,72 @@ let mainSection = document.querySelector(".main")
 
 
 
+// form.addEventListener("submit" , (val)=>{
+//    val.preventDefault();
+
+//    let card = {
+//       image : inputs[0].value,
+//       name : inputs[1].value,
+//       contact : inputs[2].value
+//    }
+   
+
+//    let cards = JSON.parse(localStorage.getItem("cards")) || [];
+//    cards.push(card);
+//    localStorage.setItem("cards" , JSON.stringify(cards));
+   
+//    showcard(card);
+
+
+//    inputs.forEach((inp)=>{
+//       if(inp.type!=="submit"){
+//          inp.value = ""
+//       }
+//    });
+   
+// });
+
+
+// window.addEventListener("DOMContentLoaded" , ()=>{
+//    let cards = JSON.parse(localStorage.getItem("cards"));
+//    cards.forEach((card)=>{
+//       showcard(card)
+//    })
+// });
+
+
+
 form.addEventListener("submit" , (val)=>{
    val.preventDefault();
-
+   
    let card = {
       image : inputs[0].value,
       name : inputs[1].value,
       contact : inputs[2].value
    }
-   
 
    let cards = JSON.parse(localStorage.getItem("cards")) || [];
-   cards.push(card);
-   localStorage.setItem("cards" , JSON.stringify(cards));
-   
+   cards.push(card)
+   localStorage.setItem("cards" , JSON.stringify(cards))
+
    showcard(card);
 
-
-   inputs.forEach((inp)=>{
+    inputs.forEach((inp)=>{
       if(inp.type!=="submit"){
          inp.value = ""
       }
    });
-   
-});
+
+})
 
 
 window.addEventListener("DOMContentLoaded" , ()=>{
-   let cards = JSON.parse(localStorage.getItem("cards"));
-   cards.forEach((card)=>{
-      showcard(card)
-   })
-});
+ let cards = JSON.parse(localStorage.getItem("cards")) || [];
+ cards.forEach((val)=>{
+   showcard(val)
+ })
+})
+
 
 
 
@@ -58,11 +92,33 @@ function showcard(data){
    let contact = document.createElement("p");
    contact.textContent =  data.contact;
 
+   
+ 
+   let deleteBtn = document.createElement("button");
+   deleteBtn.textContent = "Delete";
+   deleteBtn.classList.add("deleteBtn");
+
 
    profiles.appendChild(image);
-   main.appendChild(profiles);   
+   main.appendChild(profiles);
    main.appendChild(footBaller);
    main.appendChild(contact);
+   main.appendChild(deleteBtn)
 
-   mainSection.appendChild(main);
+
+
+
+   deleteBtn.addEventListener("click" , ()=>{
+         main.remove()
+
+         let cards = JSON.parse(localStorage.getItem("cards")) || [];
+         let updated = cards.filter((c) => !(c.name === data.name && c.contact === data.contact));
+         localStorage.setItem("cards" , JSON.stringify(updated));
+         
+              
+   })
+   
+  mainSection.appendChild(main);
 }
+
+
