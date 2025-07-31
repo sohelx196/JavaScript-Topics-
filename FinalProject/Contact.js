@@ -4,6 +4,7 @@ let form = document.querySelector("form");
 let inputs = document.querySelectorAll("input")
 let mainSection = document.querySelector(".main")
 
+let editId = null;
 
 
 // form.addEventListener("submit" , (val)=>{
@@ -61,7 +62,6 @@ form.addEventListener("submit" , (val)=>{
          inp.value = ""
       }
    });
-
 })
 
 
@@ -98,12 +98,17 @@ function showcard(data){
    deleteBtn.textContent = "Delete";
    deleteBtn.classList.add("deleteBtn");
 
+   let edit = document.createElement("button")
+   edit.textContent = "Edit";
+   edit.classList.add("edit")
+
 
    profiles.appendChild(image);
    main.appendChild(profiles);
    main.appendChild(footBaller);
    main.appendChild(contact);
    main.appendChild(deleteBtn)
+   main.appendChild(edit)
 
 
 
@@ -115,8 +120,21 @@ function showcard(data){
          let updated = cards.filter((c) => !(c.name === data.name && c.contact === data.contact));
          localStorage.setItem("cards" , JSON.stringify(updated));
          
-              
+         
    })
+   
+   edit.addEventListener("click" , ()=>{
+       
+            inputs[0].value = data.image;
+            inputs[1].value = data.name;
+            inputs[2].value = data.contact
+
+            editId = data.contact;
+            
+   
+
+   })
+
    
   mainSection.appendChild(main);
 }
