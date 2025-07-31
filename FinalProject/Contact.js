@@ -4,7 +4,6 @@ let inputs = document.querySelectorAll("input")
 let mainSection = document.querySelector(".main")
 let contactList = document.querySelector("#contactList")
 
-
 form.addEventListener("submit" , (val)=>{
    val.preventDefault();
    
@@ -23,6 +22,7 @@ form.addEventListener("submit" , (val)=>{
    localStorage.setItem("cards" , JSON.stringify(cards))
 
    showcard(card);
+   noCardMsg()
 
     inputs.forEach((inp)=>{
       if(inp.type!=="submit"){
@@ -39,13 +39,14 @@ window.addEventListener("DOMContentLoaded" , ()=>{
  cards.forEach((val)=>{
    showcard(val)
  })
+ noCardMsg()
 })
 
 
 
 
 // card is here
-function showcard(data){
+function showcard(data) {
 
 
    let main = document.createElement("div");
@@ -90,10 +91,22 @@ function showcard(data){
    
             let cards = JSON.parse(localStorage.getItem("cards")) || [];
             let updated = cards.filter((c) => !(c.name === data.name && c.contact === data.contact));
-            localStorage.setItem("card" , JSON.stringify(updated));
-            
+            localStorage.setItem("cards" , JSON.stringify(updated));
+            noCardMsg()
       })
 
 }
 
 
+function noCardMsg(){
+  let cards = JSON.parse(localStorage.getItem("cards")) || [];
+  let noCardMsg = document.querySelector("#noCardMsg");
+
+  if(cards.length === 0){
+    noCardMsg.style.display = "block"
+  }
+  else{
+   noCardMsg.style.display = "none"
+  }   
+
+}
