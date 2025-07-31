@@ -2,41 +2,7 @@
 let form = document.querySelector("form");
 let inputs = document.querySelectorAll("input")
 let mainSection = document.querySelector(".main")
-
-
-// form.addEventListener("submit" , (val)=>{
-//    val.preventDefault();
-
-//    let card = {
-//       image : inputs[0].value,
-//       name : inputs[1].value,
-//       contact : inputs[2].value
-//    }
-   
-
-//    let cards = JSON.parse(localStorage.getItem("cards")) || [];
-//    cards.push(card);
-//    localStorage.setItem("cards" , JSON.stringify(cards));
-   
-//    showcard(card);
-
-
-//    inputs.forEach((inp)=>{
-//       if(inp.type!=="submit"){
-//          inp.value = ""
-//       }
-//    });
-   
-// });
-
-
-// window.addEventListener("DOMContentLoaded" , ()=>{
-//    let cards = JSON.parse(localStorage.getItem("cards"));
-//    cards.forEach((card)=>{
-//       showcard(card)
-//    })
-// });
-
+let contactList = document.querySelector("#contactList")
 
 
 form.addEventListener("submit" , (val)=>{
@@ -63,11 +29,9 @@ form.addEventListener("submit" , (val)=>{
          inp.value = ""
       }
    });
-
-
-
-
 })
+
+
 
 
 window.addEventListener("DOMContentLoaded" , ()=>{
@@ -82,7 +46,9 @@ window.addEventListener("DOMContentLoaded" , ()=>{
 
 // card is here
 function showcard(data){
-    let main = document.createElement("div");
+
+
+   let main = document.createElement("div");
    main.classList.add("contacts");
 
    let profiles = document.createElement("div");
@@ -107,14 +73,14 @@ function showcard(data){
    edit.textContent = "Edit";
    edit.classList.add("edit")
 
-
+  
    profiles.appendChild(image);
    main.appendChild(profiles);
    main.appendChild(footBaller);
    main.appendChild(contact);
-   main.appendChild(deleteBtn)
-   main.appendChild(edit)
-
+   main.appendChild(deleteBtn);
+   main.appendChild(edit);
+   contactList.appendChild(main);
 
 
 
@@ -128,8 +94,6 @@ function showcard(data){
             
       })
 
-   
-  mainSection.appendChild(main);
 }
 
 
