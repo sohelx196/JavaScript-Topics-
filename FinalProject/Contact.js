@@ -1,10 +1,7 @@
 
-
 let form = document.querySelector("form");
 let inputs = document.querySelectorAll("input")
 let mainSection = document.querySelector(".main")
-
-let editId = null;
 
 
 // form.addEventListener("submit" , (val)=>{
@@ -51,6 +48,10 @@ form.addEventListener("submit" , (val)=>{
       contact : inputs[2].value
    }
 
+
+
+
+
    let cards = JSON.parse(localStorage.getItem("cards")) || [];
    cards.push(card)
    localStorage.setItem("cards" , JSON.stringify(cards))
@@ -62,6 +63,10 @@ form.addEventListener("submit" , (val)=>{
          inp.value = ""
       }
    });
+
+
+
+
 })
 
 
@@ -113,27 +118,15 @@ function showcard(data){
 
 
 
-   deleteBtn.addEventListener("click" , ()=>{
-         main.remove()
-
-         let cards = JSON.parse(localStorage.getItem("cards")) || [];
-         let updated = cards.filter((c) => !(c.name === data.name && c.contact === data.contact));
-         localStorage.setItem("cards" , JSON.stringify(updated));
-         
-         
-   })
    
-   edit.addEventListener("click" , ()=>{
-       
-            inputs[0].value = data.image;
-            inputs[1].value = data.name;
-            inputs[2].value = data.contact
-
-            editId = data.contact;
+      deleteBtn.addEventListener("click" , ()=>{
+            main.remove()
+   
+            let cards = JSON.parse(localStorage.getItem("cards")) || [];
+            let updated = cards.filter((c) => !(c.name === data.name && c.contact === data.contact));
+            localStorage.setItem("cards" , JSON.stringify(updated));
             
-   
-
-   })
+      })
 
    
   mainSection.appendChild(main);
