@@ -90,7 +90,7 @@ function showcard(data){
    
             let cards = JSON.parse(localStorage.getItem("cards")) || [];
             let updated = cards.filter((c) => !(c.name === data.name && c.contact === data.contact));
-            localStorage.setItem("card" , JSON.stringify(updated));
+            localStorage.setItem("cards" , JSON.stringify(updated));
             
       })
 
