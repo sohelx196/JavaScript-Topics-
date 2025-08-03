@@ -107,5 +107,26 @@ function noCardMsg(){
   else{
    noCardMsg.style.display = "none"
   }
-
+  
 }
+
+
+let showBtn = document.querySelector("#showBtn")
+let hideBtn = document.querySelector("#hideBtn")
+let contactLists = document.querySelector(".contact-container")
+
+showBtn.addEventListener("click" , ()=>{
+   let cards = JSON.parse(localStorage.getItem("cards"));
+   contactList.style.display = "flex"
+})
+hideBtn.addEventListener("click" , ()=>{
+   let cards = JSON.parse(localStorage.getItem("cards"));
+   contactList.style.display = "none"
+
+   if(contactList.style.display === "none"){
+      let para = document.createElement("p");
+      para.textContent = "Contacts are hidden"
+      para.style.color = "white"
+   }
+
+})
