@@ -22,6 +22,7 @@ form.addEventListener("submit" , (val)=>{
 
    showcard(card);
    noCardMsg()
+updateButtonVisibility()
 
     inputs.forEach((inp)=>{
       if(inp.type!=="submit"){
@@ -39,6 +40,7 @@ window.addEventListener("DOMContentLoaded" , ()=>{
    showcard(val)
  })
  noCardMsg()
+updateButtonVisibility()
 })
 
 
@@ -92,6 +94,7 @@ function showcard(data) {
             let updated = cards.filter((c) => !(c.name === data.name && c.contact === data.contact));
             localStorage.setItem("cards" , JSON.stringify(updated));
             noCardMsg()
+            updateButtonVisibility()
       })
 
 }
@@ -111,6 +114,8 @@ function noCardMsg(){
 }
 
 
+
+
 let showBtn = document.querySelector("#showBtn")
 let hideBtn = document.querySelector("#hideBtn")
 let contactLists = document.querySelector(".contact-container")
@@ -119,14 +124,22 @@ showBtn.addEventListener("click" , ()=>{
    let cards = JSON.parse(localStorage.getItem("cards"));
    contactList.style.display = "flex"
 })
+
 hideBtn.addEventListener("click" , ()=>{
    let cards = JSON.parse(localStorage.getItem("cards"));
    contactList.style.display = "none"
 
-   if(contactList.style.display === "none"){
-      let para = document.createElement("p");
-      para.textContent = "Contacts are hidden"
-      para.style.color = "white"
-   }
-
 })
+
+
+// hidding btn when there is no cards
+function updateButtonVisibility() {
+  let cards = JSON.parse(localStorage.getItem("cards")) || [];
+  if (cards.length === 0) {
+    showBtn.style.display = "none";
+    hideBtn.style.display = "none";
+  } else {
+    showBtn.style.display = "inline";
+    hideBtn.style.display = "inline";
+  }
+}
