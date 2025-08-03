@@ -107,6 +107,6 @@ function noCardMsg(){
   }
   else{
    noCardMsg.style.display = "none"
-  }   
+  }
 
 }

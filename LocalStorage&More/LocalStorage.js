@@ -61,4 +61,5 @@ console.log(val);
     let friend = JSON.parse(localStorage.getItem("Footballer"))
     console.log(friend)      // Now we got the array form...
 
+
     
