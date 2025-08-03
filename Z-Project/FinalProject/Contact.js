@@ -1,8 +1,7 @@
-
 let form = document.querySelector("form");
-let inputs = document.querySelectorAll("input")
-let mainSection = document.querySelector(".main")
-let contactList = document.querySelector("#contactList")
+let inputs = document.querySelectorAll("input");
+let mainSection = document.querySelector(".main");
+let contactList = document.querySelector("#contactList");
 
 form.addEventListener("submit" , (val)=>{
    val.preventDefault();
