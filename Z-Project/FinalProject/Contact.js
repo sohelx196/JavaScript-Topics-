@@ -142,5 +142,5 @@ function updateButtonVisibility() {
     showBtn.style.display = "inline";
     hideBtn.style.display = "inline";
   }
-   
-}
+  
+}  
