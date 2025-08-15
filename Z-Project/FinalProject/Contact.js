@@ -143,4 +143,4 @@ function updateButtonVisibility() {
     hideBtn.style.display = "inline";
   }
   
-}  
+}
