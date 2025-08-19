@@ -3,6 +3,8 @@ let inputs = document.querySelectorAll("input");
 let mainSection = document.querySelector(".main");
 let contactList = document.querySelector("#contactList");
 
+
+
 form.addEventListener("submit" , (val)=>{
    val.preventDefault();
    
@@ -22,7 +24,7 @@ form.addEventListener("submit" , (val)=>{
 
    showcard(card);
    noCardMsg()
-updateButtonVisibility()
+   updateButtonVisibility()
 
     inputs.forEach((inp)=>{
       if(inp.type!=="submit"){
@@ -100,6 +102,7 @@ function showcard(data) {
 }
 
 
+
 function noCardMsg(){
   let cards = JSON.parse(localStorage.getItem("cards")) || [];
   let noCardMsg = document.querySelector("#noCardMsg");
@@ -110,7 +113,7 @@ function noCardMsg(){
   else{
    noCardMsg.style.display = "none"
   }
-  
+
 }
 
 
@@ -145,11 +148,18 @@ function updateButtonVisibility() {
   
 }
 
-
+let myCards = JSON.parse(localStorage.getItem("cards"))
 const search = document.querySelector(".search");
 search.addEventListener("input" , (val)=>{
   
 
-   card.filter(())
+   let matchedUser =  myCards.filter((user)=>{
+     return user.name.startsWith(search.value)
+   })
+
+   contactList.innerHTML = ""
+   matchedUser.forEach((user)=>showcard(user))
+   
+   
 
 })
