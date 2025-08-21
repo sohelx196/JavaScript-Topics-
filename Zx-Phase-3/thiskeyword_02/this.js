@@ -12,6 +12,12 @@
 
 // this in method ->  (functions which is inside and object are called method)
 //   value => whole object
+       // method with es5 function => result object
+       // method with arrow function => window
+       // method with es5 function inside es5 function => window 
+       // method with arrow function inside es5 function => object
+       
+    //   note:: (arrow fnc apni value parent se lete hai)
     let obj = {
         username : "sohel",
         age : 20,
@@ -31,4 +37,9 @@
        console.log(this)
     }) 
 
-    
+
+    // *****Important*****
+    //  this in class ->
+    //  value => class ke ander this ki value blank object hoti hai..
+
+   
