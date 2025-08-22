@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Project using Manual Binding</title>
+ <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <form id="myForm" class="max-w-sm mx-auto mt-10 bg-white rounded-xl shadow-md p-6 border border-gray-200 flex flex-col gap-4">
+    <h2 class="text-xl font-semibold text-gray-800 mb-2">User Info Form</h2>
+    <input 
+        type="text" 
+        id="name" 
+        name="name" 
+        placeholder="Enter Name" 
+        class="px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+    >
+    <input 
+        type="text" 
+        id="role" 
+        name="role" 
+        placeholder="Enter Role" 
+        class="px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+    >
+    <input 
+        type="text" 
+        id="about" 
+        name="about" 
+        placeholder="About" 
+        class="px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+    >
+    <button 
+        type="submit" 
+        class="bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition"
+    >
+        Submit
+    </button>
+</form>
+
+    <div class="flex  card max-w-sm mx-auto mt-10 bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
+        
+  <!-- <div class="p-6">
+    <h2 class="text-xl font-semibold mb-2 text-gray-800">John Doe</h2>
+    <p class="text-gray-600 mb-1">Role: <span class="font-medium">Developer</span></p>
+    <p class="text-gray-500">About: Passionate about building web applications and learning new technologies.</p>
+  </div> -->
+
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
