@@ -1,23 +1,13 @@
 
-// Synchronous Programming -->     
- // The execution will be held in a sequence which is called Syncronous Programming
-console.log("Hello1"); //executed in a sequemce one by one
-console.log("Hello2"); //executed i
-
-
-
-console.log("Hello3"); //executed in a sequemce one by one
-
 // Synchronous Programming -->
 // The execution will be held in a sequence which is called Syncronous Programming
 // console.log("Hello1"); //executed in a sequemce one by one
 // console.log("Hello2"); //executed i
-
-
 // console.log("Hello3"); //executed in a sequemce one by one
 
+
 // Asynchronous Programming -->
-// In async. prog. execution will not stop at stopping method or condition else it runs the further programme and after it display the timed programme when it is completed.
+// In async. prog. execution will not stop at stopping method or condition , else it runs the further programme and after it display the timed programme when it is completed.
 
 //  function async(){
 
@@ -147,6 +137,12 @@ promise.catch((err) => {
 //     });
 // });
 
+
+
+
+
+
+
 // Promises --> To overcome the callback hell we use Promises
 //  we pass two built in function which is -- resolve and reject into the parameter
 // When we call the resolve function the promise is completed which is Fulfilled
@@ -228,14 +224,22 @@ promise.catch((err) => {
 // Better Way to write the above code is Async & Await -->
 // It helps us to simplify the Asynchronous programming
 
-// Async is keyword when we write it as a prefix of any function so this function returns a Promise
+
+
+
+
+// *** Async Await starts here.....
+
+// *** Async is keyword when we write it as a prefix of any function so this function returns a Promise
 // For Ex--
 
 // async function sohelFunction() {     //it always return a promise
 //     console.log("Hello");
 // }
 
-// Await-->
+
+
+// *** Await-->
 // Await is used to wait the promise until the promise it executed and stop the further operation until the current promise is completed
 // It can only be used inside an async function..
 
@@ -292,4 +296,42 @@ function GetUserInfo(name) {
    console.log("Fetching Data from server..");
   await GetUserInfo("Elon Musk"); 
 })();   // IIFE Function
+
+// ****** Apna Collage code ends here ********
+
+
+
+
+
+// ****** Sheriyans code started from here ********
+
+
+// sync code => code which runs line by line
+
+
+// async code => code which stop for a while and runs after some time
+
+
+// callback => it means when we pass a function into the parameter of the another function, its called callback.
+
+
+// callback hell => it is the situation where the callback are goes in a nested form..
+
+
+// Promises (resolve , reject , then , catch) => go through the apna collage code :)
+
+
+// async / await =>  
+    // another way of handling promises instead of then and catch...
+
+    // Any function marked with async always returns a Promise.
+    // Inside an async function, you can use await.
+
+    // await is used inside async functions only.
+    // It pauses the function execution until the Promise is resolved or rejected.
+    // Makes async code look like synchronous (step by step).
+    
+    
+
+
 

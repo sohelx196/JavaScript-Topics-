@@ -23,8 +23,15 @@ play(text){
     document.body.appendChild(h1)
 }
 
-
 }
 
-
 let f1 = new Footballers("Messiii" , "Barca" , 10 , "Argentine")
+
+
+
+
+
+
+
+
+
