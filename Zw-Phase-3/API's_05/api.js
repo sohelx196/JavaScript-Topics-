@@ -12,7 +12,7 @@ let catBtn = document.querySelector("#mybut");
 
 const getCatData = async () => {
   let response = await fetch(apiUrl);
-  console.log(response); //It returns JSON format data and it is not understandable so we convert it into js object by using json() method
+  console.log(response); // It returns JSON format data and it is not understandable so we convert it into js object by using json() method
   let result = await response.json();
   catFacts.innerText = result[4].text;
 };
