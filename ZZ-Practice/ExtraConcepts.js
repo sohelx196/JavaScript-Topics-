@@ -35,7 +35,7 @@ const user = {
 
 
 console.log(user.marks)
-console.log(user.marks.it.marks);  // error shown
+// console.log(user.marks.it.marks);  // error shown
 console.log(user.marks.it?.marks);  // now cause of optional chaining the error not shown
 
 
@@ -48,3 +48,12 @@ let total = marks ?? 0;
 console.log(total);   // 0 is the answer..cause marks is undefined
 
 
+
+
+// localstorage -->
+
+const bhaiNames = {name: "messi" , age : 34};
+localStorage.setItem("bhai" , JSON.stringify(bhaiNames));
+
+const showBhai = JSON.parse(localStorage.getItem("bhai"));
+console.log(showBhai);
