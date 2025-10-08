@@ -57,3 +57,7 @@ localStorage.setItem("bhai" , JSON.stringify(bhaiNames));
 
 const showBhai = JSON.parse(localStorage.getItem("bhai"));
 console.log(showBhai);
+
+
+
+// async await -->

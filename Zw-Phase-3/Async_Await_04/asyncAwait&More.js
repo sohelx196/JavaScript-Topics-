@@ -1,9 +1,9 @@
 
 // Synchronous Programming -->
 // The execution will be held in a sequence which is called Syncronous Programming
-// console.log("Hello1"); //executed in a sequemce one by one
-// console.log("Hello2"); //executed i
-// console.log("Hello3"); //executed in a sequemce one by one
+// console.log("Hello1"); //executed in a sequence one by one
+// console.log("Hello2"); //executed in a sequence one by one
+// console.log("Hello3"); //executed in a sequence one by one
 
 
 // Asynchronous Programming -->
@@ -35,9 +35,6 @@
 
 // CallBack Hell
 // When we call a callback into another call back and this is going on then it is called callback hell
-
-    // CallBack Hell  
-    // When we call a callback into another call back and this is going on then it is called callback hell
 
 
     function getName(userId , getSecondUser){
@@ -108,7 +105,7 @@ promise.catch((err) => {
 
 // Promise Chaining --> we use nested then or catch hence it is called promise chaining
 
- 
+
 
 
 
@@ -151,7 +148,7 @@ promise.catch((err) => {
 // 1) Pending
 // 2) Fulfilled (resolved)
 // 3) rejected
-
+ 
 // let myPromise = new Promise((resolve , reject) => {
 //     console.log("Hello world");
 //     resolve("Promise is resolved");
@@ -240,7 +237,7 @@ promise.catch((err) => {
 
 
 // *** Await-->
-// Await is used to wait the promise until the promise it executed and stop the further operation until the current promise is completed
+// Await is used to wait the promise until the promise is executed and stop the further operation until the current promise is completed
 // It can only be used inside an async function..
 
 // function country(ParaOfCountry) {
@@ -315,7 +312,7 @@ function GetUserInfo(name) {
 // callback => it means when we pass a function into the parameter of the another function, its called callback.
 
 
-// callback hell => it is the situation where the callback are goes in a nested form..
+// callback hell => this is the situation where the callback are goes in a nested form..
 
 
 // Promises (resolve , reject , then , catch) => go through the apna collage code :)
