@@ -4,10 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-    
+    <style>
+        .form{
+            border: 1px solid black;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+             
+            /* background-color: rgb(7, 7, 7); */
+             border-radius: 10px;
+        }
 
+        input{
+            padding: 10px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body style="background-color: black;">
+    
+    <form action="#" class="form">
+        <div>
+            <input type="text" placeholder="Enter Your Name">
+            <input type="text" placeholder="Enter Father Name">
+            <input type="text" placeholder="Enter Mobile">
+
+            <!-- <input type="submit" onsubmit="handleS ubmit()"> -->
+             <button style="padding: 10px;background-color:red;color:white;border:2px solid white;" onclick="handleSubmit()">Submit</button>
+             <input type="reset">
+        </div>
+    </form>
+     
+
+    <script>
+        
+      const form  = document.querySelector("form");
+      const input = document.querySelectorAll("input");
+ 
+      function handleSubmit(){
+
+          form.addEventListener("input" , (val)=>{
+             val.preventDefault();
+             const inputVal = val.target.value;
+             console.log(inputVal);
+             localStorage.setItem("name" , JSON.stringify(inputVal));
+             console.log(JSON.parse(localStorage.getItem("name"))); // Data is fetching here..
+          })
+          
+      }
+
+    </script>
     <script type="module" src="ExtraConcepts.js"></script>
 </body>
 </html>

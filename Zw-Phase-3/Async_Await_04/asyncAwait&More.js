@@ -291,7 +291,7 @@ function GetUserInfo(name) {
    console.log("Fetching Data from server..");
   await GetUserInfo("X"); 
    console.log("Fetching Data from server..");
-  await GetUserInfo("Elon Musk"); 
+  await GetUserInfo("Elon Musk");
 })();   // IIFE Function
 
 // ****** Apna Collage code ends here ********
