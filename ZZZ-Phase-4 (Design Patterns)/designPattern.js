@@ -9,15 +9,10 @@
       //    Expose only what you want (public methods)
          
       //    Avoid polluting the global scope
-               //  Global variable pollution = having too many variables in the global scope that can accidentally overwrite each other.
+               //  Global variable pollution = having too man y variables in the global scope that can accidentally overwrite each other.
 
                //  Module Pattern helps by creating private scopes, protecting your variables from being exposed globally.
 
-let Bank = function(){
-      let customerName = "John";
 
-      function allCustomer(){
-         console.log("Hello" , customerName)
-      }
-
-};
+       // IIFE creates its own scope, meaning all variables inside it are local to that function , thats why we are not able to access it outside (encapsulated)
+      
