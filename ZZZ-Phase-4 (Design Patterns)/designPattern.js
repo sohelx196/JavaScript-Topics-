@@ -30,9 +30,10 @@ const MyModule = (function() {
 })();
 
 
-// Ex-2
+// Ex-2 (Basic Atm System)
 let Bank = (function(){
   let balance = 1000;
+  let transaction = [];
 
   function checkbalance(){
     console.log("Your Account Balance is ₹",balance);
@@ -40,20 +41,27 @@ let Bank = (function(){
 
   function withdraw(amount){
      if(amount > balance){
-      alert("Insufficient Balance!!")
+      console.log("Insufficient Balance!!")
      }
      else{
        balance = balance - amount;
+       transaction.push({type : "deposit" , amount , balance})
        console.log("The Amount ₹" , amount , "is debited & remaining balance is ₹" , balance)
      }
   }
 
   function addBalance(amount){
     balance += amount;
-    console.log("Balance added successfully!! & Total balance is ₹" , balance)
+    console.log("₹", amount ,"added successfully!! & Total balance is ₹" , balance)
   }
 
-  return{ withdraw , addBalance }
-})();
-Bank.withdraw(100)
-Bank.addBalance(1100)
+  function statement(){
+    console.log("Transactions" , transaction)
+  }
+
+  return{ withdraw , addBalance , statement }
+})(); 
+// Bank.withdraw(100);
+// Bank.addBalance(1100);
+// Bank.statement()
+// Bank.addBalance(2000);
