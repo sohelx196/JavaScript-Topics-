@@ -47,7 +47,7 @@ let Bank = (function(){
        balance = balance - amount;
        transaction.push({type : "deposit" , amount , balance})
        console.log("The Amount ₹" , amount , "is debited & remaining balance is ₹" , balance)
-     }
+     }  
   }
 
   function addBalance(amount){
@@ -57,9 +57,9 @@ let Bank = (function(){
 
   function statement(){
     console.log("Transactions" , transaction)
-  }
+  } 
   
-  return{ checkbalance , withdraw , addBalance , statement }
+  return { checkbalance , withdraw , addBalance , statement }
 })();
 
 // Bank.withdraw(100);
