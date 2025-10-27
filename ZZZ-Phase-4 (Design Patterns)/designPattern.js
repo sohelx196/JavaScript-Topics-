@@ -53,18 +53,17 @@ let Bank = (function(){
   function addBalance(amount){
     balance += amount;
     console.log("₹", amount ,"added successfully!! & Total balance is ₹" , balance)
-  } 
+  }
 
-  function statement(){
-    console.log("Transactions" , transaction)
+  function statement(){ 
+    console.log("Your Latest Transactions" , transaction)
   } 
   
   return { checkbalance , withdraw , addBalance , statement };
 })();
 
-// Bank.withdraw(100);
-// Bank.addBalance(1100);
-// Bank.statement()
-// Bank.addBalance(2000);
-
+Bank.withdraw(100);
+Bank.addBalance(1100);
+Bank.statement()
+Bank.addBalance(2000);
 
