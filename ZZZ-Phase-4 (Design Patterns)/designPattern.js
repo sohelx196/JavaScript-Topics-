@@ -59,11 +59,10 @@ let Bank = (function(){
     console.log("Your Latest Transactions" , transaction)
   } 
   
-  return { checkbalance , withdraw , addBalance , statement };
-
+  return { checkbalance , withdraw , addBalance , statement  };
+  
 })();
 
 Bank.withdraw(100);
 Bank.addBalance(1100);
 Bank.statement();
-Bank.addBalance(2000); 
