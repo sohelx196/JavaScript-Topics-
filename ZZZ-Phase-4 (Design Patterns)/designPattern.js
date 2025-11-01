@@ -36,7 +36,9 @@ let Bank = (function(){
   let transaction = [];
 
   function checkbalance(){
-    console.log("Your Account Balance is ₹",balance);
+    console.log("Your Account Balance is ₹", balance);
+
+  
   }
 
   function withdraw(amount){
@@ -58,11 +60,15 @@ let Bank = (function(){
   function statement(){ 
     console.log("Your Latest Transactions" , transaction)
   } 
-  
-  return { checkbalance , withdraw , addBalance , statement  };
-  
-})();
 
-Bank.withdraw(100);
-Bank.addBalance(1100);
-Bank.statement();
+  
+  return { checkbalance , withdraw , addBalance , statement };
+ 
+})();
+    let rashi = document.querySelector("#balancee");
+    rashi.addEventListener("click" , Bank.checkbalance);
+
+    let transaction = document.querySelector("#transaction");
+    transaction.addEventListener("click" , Bank.statement);
+
+    
