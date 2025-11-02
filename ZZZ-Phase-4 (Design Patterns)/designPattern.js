@@ -70,5 +70,5 @@ let Bank = (function(){
 
     let transaction = document.querySelector("#transaction");
     transaction.addEventListener("click" , Bank.statement);
-    
+ 
     
