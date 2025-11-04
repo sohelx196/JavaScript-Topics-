@@ -111,10 +111,10 @@ let Bank = (function(){
     return{
       login(enteredUsername , enteredPassword){
            if(enteredUsername === username && enteredPassword === password){
-              alert(`Welcome ${username}`);
+              console.log(`Welcome ${username}`);
            }
            else{
-             alert(`username or password is incorrect!!`);
+             console.log(`username or password is incorrect!!`);
            }
       }
     }
@@ -137,6 +137,7 @@ let Bank = (function(){
 //         └──────┬───────┘
 //                │
 //       ┌────────┴─────────┐
+
 //       │        │         │
 //  ┌────────┐ ┌────────┐ ┌────────┐
 //  │Observer│ │Observer│ │Observer│
@@ -144,5 +145,37 @@ let Bank = (function(){
 //  └────────┘ └────────┘ └────────┘
 
 // The Observer Pattern lets one object (subject) automatically tell many others (observers) 
-// when something changes — just like a YouTube channel notifying all its subscribers about a new video
+// When something changes — just like a YouTube channel notifying all its subscribers about a new video
 
+// Example 1 
+
+const youtube = {
+   observer : [],
+
+   subscribe(user){
+    this.observer.push(user);
+   },
+
+   unsubscribe(user){                                                                                                   
+    this.observer = this.observer.filter(u => u !== user);
+   },
+
+   notify(data){
+    this.observer.forEach(s => s(data))
+   }
+}
+
+function subs1(data){
+  console.log("Hello User 1" , data)
+}
+
+function subs2(data){
+  console.log("Hello User 2" , data)
+}
+
+youtube.subscribe(subs1);
+youtube.subscribe(subs2);
+
+console.log(youtube.observer);
+
+youtube.notify("New Video is uploaded!!");
