@@ -1,6 +1,6 @@
 // Design Pattern -> A smart way to organize or structure our code to make it more readable, reusable, and maintainable. 
   
-   // *** Module pattern *** => 
+   // 1) *** Module pattern *** => 
       //  The Module Pattern is one of the most popular design patterns in JavaScript.
       //    It is used to:
 
@@ -73,7 +73,7 @@ let Bank = (function(){
 
 
 
-// *** Revealing Module Pattern ***
+// 2) *** Revealing Module Pattern ***
     //     In this module pattern we do the same as above but when we going to return 
     //     the functions, so we set another name of those function in the return object..
 
@@ -81,7 +81,7 @@ let Bank = (function(){
 
 
 
-// *** Factory function pattern *** 
+// 3) *** Factory function pattern *** 
        // A factory function is just a normal function that returns an object — instead of using a class or constructor.
 
        // We “call” it like a function, and it “builds” objects for us (like a factory makes products).
@@ -111,10 +111,10 @@ let Bank = (function(){
     return{
       login(enteredUsername , enteredPassword){
            if(enteredUsername === username && enteredPassword === password){
-              alert(`Welcome ${username}`)
+              alert(`Welcome ${username}`);
            }
            else{
-             alert(`username or password is incorrect!!`)
+             alert(`username or password is incorrect!!`);
            }
       }
     }
@@ -122,4 +122,27 @@ let Bank = (function(){
   }
   let user1 = createUser("hasir2029", "star123");
   user1.login("sohel" , "1233");
+
+  
+
+
+// 4) *** Obeserver Pattern ***  ( Mostly used )
+
+  //  The Observer Pattern defines a one-to-many dependency between objects, so that when one object (the subject)
+  //  changes its state, all its dependents (observers) are automatically notified and updated.
+
+//         ┌──────────────┐
+//         │   Subject    │
+//         │ (Publisher)  │
+//         └──────┬───────┘
+//                │
+//       ┌────────┴─────────┐
+//       │        │         │
+//  ┌────────┐ ┌────────┐ ┌────────┐
+//  │Observer│ │Observer│ │Observer│
+//  │   A    │ │   B    │ │   C    │
+//  └────────┘ └────────┘ └────────┘
+
+// The Observer Pattern lets one object (subject) automatically tell many others (observers) 
+// when something changes — just like a YouTube channel notifying all its subscribers about a new video
 
