@@ -80,4 +80,46 @@ let Bank = (function(){
     // return { check : checkbalance , takemoney : withdraw , credit : addBalance , transaction : statement };
 
 
-    
+
+// *** Factory function pattern *** 
+       // A factory function is just a normal function that returns an object — instead of using a class or constructor.
+
+       // We “call” it like a function, and it “builds” objects for us (like a factory makes products).
+
+// Example 1 
+   function hasirMart(productName , price){
+  
+    return{
+      // productName : productName,
+      // price : price,
+     
+      takeProduct(){
+          console.log(`${productName} is taken successfully.. ₹${price}`)
+      }
+    }
+
+   }
+  let product1 =  hasirMart("SOAP" , 1000);
+  let product2 =  hasirMart("KitKat" , 10);
+  product1.takeProduct();
+  product2.takeProduct();
+
+
+// Example 2
+  function createUser(username , password){
+
+    return{
+      login(enteredUsername , enteredPassword){
+           if(enteredUsername === username && enteredPassword === password){
+              alert(`Welcome ${username}`)
+           }
+           else{
+             alert(`username or password is incorrect!!`)
+           }
+      }
+    }
+
+  }
+  let user1 = createUser("hasir2029", "star123");
+  user1.login("sohel" , "1233");
+
