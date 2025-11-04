@@ -9,7 +9,7 @@
       //    Expose only what you want (public methods)
          
       //    Avoid polluting the global scope
-               //  Global variable pollution = having too man y variables in the global scope that can accidentally overwrite each other.
+               //  Global variable pollution = having too many variables in the global scope that can accidentally overwrite each other.
 
                //  Module Pattern helps by creating private scopes, protecting your variables from being exposed globally.
 
@@ -37,8 +37,6 @@ let Bank = (function(){
 
   function checkbalance(){
     console.log("Your Account Balance is ₹", balance);
-
-  
   }
 
   function withdraw(amount){
@@ -70,5 +68,16 @@ let Bank = (function(){
 
     let transaction = document.querySelector("#transaction");
     transaction.addEventListener("click" , Bank.statement);
- 
+     
+    let username = document.getElementById("#")
+
+
+
+// *** Revealing Module Pattern ***
+    //     In this module pattern we do the same as above but when we going to return 
+    //     the functions, so we set another name of those function in the return object..
+
+    // return { check : checkbalance , takemoney : withdraw , credit : addBalance , transaction : statement };
+
+
     
