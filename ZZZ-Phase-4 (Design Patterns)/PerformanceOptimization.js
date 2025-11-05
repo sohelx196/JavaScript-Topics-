@@ -11,3 +11,4 @@
          // So, we wait until the user stops typing for 500ms —
          // then call the search function once.
          // 👉 That’s debouncing.
+            
