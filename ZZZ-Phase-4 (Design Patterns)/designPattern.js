@@ -137,7 +137,6 @@ let Bank = (function(){
 //         └──────┬───────┘
 //                │
 //       ┌────────┴─────────┐
-
 //       │        │         │
 //  ┌────────┐ ┌────────┐ ┌────────┐
 //  │Observer│ │Observer│ │Observer│
@@ -151,12 +150,17 @@ let Bank = (function(){
 
 const youtube = {
    observer : [],
+   likes : [],
+
+   Likes(user){
+    this.likes.push(user);
+   },
 
    subscribe(user){
     this.observer.push(user);
    },
-
-   unsubscribe(user){                                                                                                   
+                                                                                                   
+   unsubscribe(user){
     this.observer = this.observer.filter(u => u !== user);
    },
 
@@ -175,7 +179,9 @@ function subs2(data){
 
 youtube.subscribe(subs1);
 youtube.subscribe(subs2);
+youtube.Likes(subs1);
 
 console.log(youtube.observer);
+console.log(youtube.likes);
 
 youtube.notify("New Video is uploaded!!");
