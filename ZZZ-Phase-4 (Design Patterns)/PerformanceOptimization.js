@@ -12,3 +12,17 @@
          // then call the search function once.
          // 👉 That’s debouncing.
             
+
+function debounce(fnc , delay){
+  let timer;
+  return function(){
+    clearTimeout(timer)
+  }
+}
+
+function searchQuery(data){
+    console.log("Searching for " , data)
+}
+
+
+let finalDebounce = debounce(searchQuery , 2000);
