@@ -1,4 +1,4 @@
-// Performance Optimization -->
+// Performance Optimization or Optimization Techniques -->
 
 // *** Debouncing *** //
     // It makes sure your function runs only once after you stop doing something — not every single time during it.
@@ -39,18 +39,30 @@ document.querySelector("input").addEventListener("input" , debounc(
    // interval pr chalega
    // means action agr hota rha and aapne ek interval batya to utne interval me aapka event chalega..(chahe action kitni bhi speed ya slow ho rha ho usse koi frk nhi pdega)
 
+
 function throttle(fnc , delay){
       let timer = 0;
       return function(...args){
-         timer = setTimeout(
-            
-            fnc(...args ,  )
+         timer = setTimeout(            
+            fnc(...args)
          ),1000
-      }  
+      }
 }
 
 document.querySelector("input").addEventListener("input" , throttle(
    function(){
-       console.log("Throttling happened...")
+       console.log("Throttling happened...");
    },1000
-))
+));
+
+function debounce(){
+   let timer;
+   return function(...args){
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+         fnc(...args)
+      }, delay);
+   } 
+}
+
+
