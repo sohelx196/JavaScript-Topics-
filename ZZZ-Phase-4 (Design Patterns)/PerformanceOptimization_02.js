@@ -23,7 +23,6 @@ function debounc(fnc , delay){
           fnc(...args)
       }, delay);
    }
-
 }
 
 document.querySelector("input").addEventListener("input" , debounc(
@@ -37,32 +36,43 @@ document.querySelector("input").addEventListener("input" , debounc(
 
 // ** Throttling ** //
    // interval pr chalega
-   // means action agr hota rha and aapne ek interval batya to utne interval me aapka event chalega..(chahe action kitni bhi speed ya slow ho rha ho usse koi frk nhi pdega)
+   // means action agr hota rha and aapne ek interval batya to utne interval me aapka event chalega..
+   // (chahe action kitni bhi speed se ya slow ho rha ho usse koi frk nhi pdega)
 
 
-function throttle(fnc , delay){
-      let timer = 0;
-      return function(...args){
-         timer = setTimeout(            
-            fnc(...args)
-         ),1000
-      }
+function throttling(fnc , delay){
+     let timer =  0;
+     return function(...args){
+        let now = Date.now();
+        if(now-timer >= delay){
+              timer = now;
+              fnc(...args);
+         }
+     }
 }
 
-document.querySelector("input").addEventListener("input" , throttle(
-   function(){
-       console.log("Throttling happened...");
-   },1000
+
+document.querySelector("input").addEventListener("input" , throttling(
+   function(user){
+          console.log("Hurrahh!!! Throttling is workedd...")
+   },2000
 ));
 
-function debounce(){
-   let timer;
-   return funection(...args){
-      clearTimeout(timer);
-      timer = setTimeout(() => {
-         fnc(...args)
-      }, delay);
-   } 
-}
+
+// Lazy Loading Images (with InterSectionObserver)
 
 
+
+
+
+
+
+
+
+
+
+
+// 12 Nov 2025 work -->
+    // All subject pyq imp questions...
+    // further video 2 concept by tommorow...
+    // 20 pushups
