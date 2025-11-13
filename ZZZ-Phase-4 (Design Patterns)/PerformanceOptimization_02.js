@@ -51,28 +51,53 @@ function throttling(fnc , delay){
      }
 }
 
-
+   
 document.querySelector("input").addEventListener("input" , throttling(
    function(user){
           console.log("Hurrahh!!! Throttling is workedd...")
    },2000
 ));
+   
 
 
+// *** Important topic ****
 // Lazy Loading Images (with InterSectionObserver)
+      // Lazy loading means:
+      // “Don’t load an element until it’s about to appear on screen.”
+      // Instead of loading every image immediately, we only load an image when it’s about to enter the viewport.
+
+      // { InterSectionObserver } is a browser API that lets you observe when an element enters or leaves the viewport (or any container).
+
+ 
+    // ⚠️ Common mistakes ****
+    
+    // ❌ Using display: none — hidden elements can’t be observed.
+    // ✅ Use opacity: 0 instead if you want to hide them visually.
+    
+    // ❌ Forgetting to unobserve.
+    // ✅ Always call observer.unobserve(entry.target) once it’s loaded.
+    
+    // ❌ Not setting width/height on images.
+    // ✅ Without dimensions, the page layout jumps when the image loads (bad CLS score).
+    
+    // ❌ Using too small rootMargin.
+    // ✅ Add a bit of margin (like 200px) so images preload smoothly.
+
+
+
+   // *** You can lazy-load anything **** 
+
+     // Videos (<video> tag)     
+     // Iframes (e.g., YouTube embeds)     
+     // Components in React or Vue (code-splitting)     
+     // Background animations or counters     
+     // Infinite scroll sections (load more posts)
 
 
 
 
 
-
-
-
-
-
-
-
-// 12 Nov 2025 work -->
+// 13 Nov 2025 work -->
     // All subject pyq imp questions...
     // further video 2 concept by tommorow...
     // 20 pushups
