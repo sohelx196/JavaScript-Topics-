@@ -57,7 +57,7 @@ document.querySelector("input").addEventListener("input" , throttle(
 
 function debounce(){
    let timer;
-   return function(...args){
+   return funection(...args){
       clearTimeout(timer);
       timer = setTimeout(() => {
          fnc(...args)
