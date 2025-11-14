@@ -112,9 +112,8 @@ document.querySelector("input").addEventListener("input" , throttling(
          }
         })
    } , {
-      root : null,
-      threshold : 0.4,
-     
+      root : null, // null means screen viewport
+      threshold : 0.4,  // 40% screen section and then img appear
    })
      
 imgs.forEach(function (img) {
@@ -124,7 +123,5 @@ imgs.forEach(function (img) {
 
 
 
-// 13 Nov 2025 work -->
-    // All subject pyq imp questions...
-    // further video 2 concept by tommorow...
-    // 20 pushups
+// 15 Nov 2025 work -->
+    
