@@ -91,13 +91,35 @@ document.querySelector("input").addEventListener("input" , throttling(
      // Iframes (e.g., YouTube embeds)     
      // Components in React or Vue (code-splitting)     
      // Background animations or counters     
-     // Infinite scroll sections (load more posts)
+     // Infinite scroll sections (load more posts  in instagram , facebookk etc..)
 
 
      // *** Why use the (data-) prefix? ****
-     
+
      // Because data-* attributes are made for custom data in HTML.
      // They let us attach information to elements without breaking HTML rules.
+
+// Example =>
+   let imgs = document.querySelectorAll("img");
+
+   let observer = new IntersectionObserver(function(entries , observer){
+        entries.forEach(function(entry){
+         if(entry.isIntersecting){
+           let img =  entry.target;
+           img.classList.add("show");
+           img.src = img.dataset.src;
+           observer.unobserve(entry.target);
+         }
+        })
+   } , {
+      root : null,
+      threshold : 0.4,
+     
+   })
+     
+imgs.forEach(function (img) {
+   observer.observe(img);
+})
 
 
 
