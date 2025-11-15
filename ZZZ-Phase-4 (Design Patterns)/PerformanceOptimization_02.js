@@ -94,7 +94,7 @@ document.querySelector("input").addEventListener("input" , throttling(
      // Infinite scroll sections (load more posts  in instagram , facebookk etc..)
 
 
-     // *** Why use the (data-) prefix? ****
+     // *** Why use the (data-) prefix? ***
 
      // Because data-* attributes are made for custom data in HTML.
      // They let us attach information to elements without breaking HTML rules.
@@ -119,7 +119,6 @@ document.querySelector("input").addEventListener("input" , throttling(
 imgs.forEach(function (img) {
    observer.observe(img);
 });
-
 
 
 
