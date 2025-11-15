@@ -108,20 +108,23 @@ document.querySelector("input").addEventListener("input" , throttling(
            let img =  entry.target;
            img.classList.add("show");
            img.src = img.dataset.src;
-           observer.unobserve(entry.target);
+           observer.unobserve(entry);
          }
         })
    } , {
       root : null, // null means screen viewport
-      threshold : 0.4,  // 40% screen section and then img appear
-   })
+      threshold : 0.4,  // 40% screen section and then the img appear
+   });
      
 imgs.forEach(function (img) {
    observer.observe(img);
-})
+});
 
 
 
 
 // 15 Nov 2025 work -->
-    
+    // 1 concept of js 
+    // TOC STUDY UNIT 1 SMALL
+    // 20 PUSH
+    // try to find out idea of startup (TAKE TIME)
