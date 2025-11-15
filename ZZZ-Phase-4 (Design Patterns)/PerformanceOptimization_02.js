@@ -176,7 +176,7 @@ ul.appendChild(space)
         }
         else{
            clearInterval(int)   // this will clear the interval unless it keep running
-           console.log("Finished...")  
+           console.log("Finished...")
         }
      }, 500);
 
@@ -184,7 +184,7 @@ ul.appendChild(space)
 
 
 
-     
+
 
 
 
