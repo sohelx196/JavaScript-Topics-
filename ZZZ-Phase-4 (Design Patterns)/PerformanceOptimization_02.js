@@ -122,8 +122,76 @@ imgs.forEach(function (img) {
 
 
 
+
+
+//  ***  Reflow and Repaint  ***
+
+
+    // ** Reflow (Layout Change)    
+    // Happens when the browser recalculates layout of elements.    
+
+    // Example:  
+    // Changing width/height    
+    // Changing font-size    
+    // Adding/removing DOM nodes
+
+
+     // ** Repaint (Appearence Change)
+     
+     // Happens when appearance changes but layout same.
+     
+     // Example:
+     // Changing color     
+     // Changing background
+
+
+let ul = document.querySelector("ul");
+let space = document.createDocumentFragment();
+
+for(let i=0;i<=50;i++){
+
+   let li = document.createElement("li");
+   li.textContent = i;
+   space.appendChild(li)   
+
+}
+ul.appendChild(space)
+// Chatgpt it for more examples...
+
+
+
+
+
+
+// *** Memory Leaks : timers & event listners  ***
+
+    // A memory leak happens when JavaScript keeps some data in memory even though you no longer need it.
+       // This slowly fills RAM → app becomes slow → browser might crash.
+
+     let timer = 0;
+     let int = setInterval(() => {
+        if(timer<10){
+         timer++;
+         console.log(timer)
+        }
+        else{
+           clearInterval(int)   // this will clear the interval unless it keep running
+           console.log("Finished...")  
+        }
+     }, 500);
+
+
+
+
+
+     
+
+
+
+
+
 // 15 Nov 2025 work -->
-    // 1 concept of js 
+   
     // TOC STUDY UNIT 1 SMALL
-    // 20 PUSH
+   
     // try to find out idea of startup (TAKE TIME)

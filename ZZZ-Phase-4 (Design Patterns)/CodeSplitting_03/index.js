@@ -8,4 +8,4 @@ const btn = document.querySelector("button");
 btn.addEventListener("click" , async function(){
    let result =  await import("./maths.js");
    console.log(result.add(4,5));
-}); 
+});
