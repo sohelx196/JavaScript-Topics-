@@ -175,23 +175,21 @@ ul.appendChild(space)
          console.log(timer)
         }
         else{
-           clearInterval(int)   // this will clear the interval unless it keep running
-           console.log("Finished...Now there is no repeatance cause the interval was cleared")
+           clearInterval(int);   // this will clear the interval unless it keep running
+           console.log("Finished...Now there is no repeatance cause the interval was cleared");
         }
      }, 500);
+     
 
+     // ** explore about how memory leak happened in different things like eventListners and more other ...**
 
-
-
-
-
-
-
-
-
-
-// 15 Nov 2025 work -->
    
-    // TOC STUDY UNIT 1 SMALL
-   
+
+
+
+
+
+
+// 15 Nov 2025 work -->   
+    // TOC STUDY UNIT 1 SMALL   
     // try to find out idea of startup (TAKE TIME)
