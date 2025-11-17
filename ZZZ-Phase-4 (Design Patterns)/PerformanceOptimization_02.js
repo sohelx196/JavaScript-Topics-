@@ -142,7 +142,7 @@ imgs.forEach(function (img) {
      
      // Example:
      // Changing color     
-     // Changing background
+     // Changing background 
 
 
 let ul = document.querySelector("ul");
@@ -156,7 +156,7 @@ for(let i=0;i<=50;i++){
 
 }
 ul.appendChild(space)
-// Chatgpt it for more examples...
+// Chatgpt it for more examples.
 
 
 
@@ -178,9 +178,9 @@ ul.appendChild(space)
            clearInterval(int);   // this will clear the interval unless it keep running
            console.log("Finished...Now there is no repeatance cause the interval was cleared");
         }
-     }, 500);
-     
-
+     }, 500); 
+        
+      
      // ** explore about how memory leak happened in different things like eventListners and more other ...**
 
    
