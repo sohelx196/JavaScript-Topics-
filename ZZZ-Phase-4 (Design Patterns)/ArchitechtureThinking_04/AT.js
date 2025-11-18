@@ -31,31 +31,32 @@
         // UI update logic 
         // 👉 All inside one function — this violates Separation of Concerns.
         
-// async function ourData(){
-//     let p = document.querySelector("p");
-//     let btn = document.querySelector("button");
+async function ourData(){
+    let p = document.querySelector("#another");
+    let btn = document.querySelector("button");
     
-//     btn.addEventListener("click" , async function() {
+    btn.addEventListener("click" , async function() {
         
-//         try{
-//             let [city,village] = await Promise.all([
-//             fetch('https://api.adviceslip.com/advice'),
-//             fetch('https://api.adviceslip.com/advice')   
-//         ]);
-//         let cityData = await city.json();
-//         let VillageData =  await village.json();
-//         p.innerText = cityData.slip.advice;   
-//     }
-//     catch(error){
-//         console.log(error);
-//     }
+        try{
+            // with Promise.all we are able to fetch multiple api at a time.
+            let [city,village] = await Promise.all([
+            fetch('https://api.adviceslip.com/advice'),
+            fetch('https://api.adviceslip.com/advice')   
+        ]);
+        let cityData = await city.json();
+        let VillageData =  await village.json();
+        p.innerText =  cityData.slip.advice;   
+    }
+    catch(error){
+        console.log(error);
+    }
 
-// })
-// }
-// ourData();
+})
+}
+ourData();
 
 
-// With Seperation Concern here ->
+// With Seperation Concern all are stuructured here ->
      //  ✔ 1. Function to fetch advice
      //  ✔ 2. Function to update UI
      //  ✔ 3. Function to handle click
