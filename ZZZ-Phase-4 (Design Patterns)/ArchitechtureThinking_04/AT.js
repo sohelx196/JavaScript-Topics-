@@ -9,31 +9,40 @@
             // Making code scalable & maintainable            
             // Thinking in components, layers, events, responsibilities
 
-// FETCHING DATA USING MULTIPLE API's =>
-async function getData() {
-    
+
+
+
+// using promise.all for fetching from multiple api's -->
+async function ourData(){
+
     try{
-        let response = await fetch('https://api.nationlize.io?name=nathaniel');
-        let data = await response.json();
-        console.log("Fetching Data...");
-        setTimeout(() => {
-            console.log(data.name);
-        }, 2000);
+        let [city,village] = await Promise.all([
+            fetch('https://dummyjson.com/products'),
+            fetch('https://dummyjson.com/products')
+        ]);
+
+       let cityData = await city.json();
+       let VillageData =  await village.json()
+       cityData.products.forEach(item => {
+        console.log(item.title)
+       });
     }
     catch(error){
-        console.log("Error Occured : " , error);
+      console.log(error)
     }
-    
-}       
-    
-getData();
+
+}
+
+
+ourData()
+
 
             
 
 
 
-// 17 Nov work =>
-
+// 18 Nov work =>
+      
     // js  Architechture thining concept done by tommorow
 
     // TOC Intro
