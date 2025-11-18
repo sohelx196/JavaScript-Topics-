@@ -1,6 +1,6 @@
 // What Is Architectural Thinking ? 
 
-       // Architectural thinking in JS is:
+       // Architectural thinking means:
 
             // Planning before coding            
             // Separating logic clearly            
@@ -10,34 +10,91 @@
             // Thinking in components, layers, events, responsibilities
 
 
+  // ***  (AT concept 1) Separation of Concerns ***
+      // seperate the dom code (ui code) & logic code.
+      // Divide your code so each part does only ONE job.
+
+             //   You achieve this by:
+                 //     ✔ small functions
+                 //     ✔ separating UI from logic
+                 //     ✔ separating API calls
+                 //     ✔ separating components (React)
 
 
-// using promise.all for fetching from multiple api's -->
-async function ourData(){
+// Without Seperation Concern  ->
+        
+    // Right now everything is mixed together:
 
+        // DOM selection 
+        // Event listener 
+        // Fetch logic 
+        // UI update logic 
+        // 👉 All inside one function — this violates Separation of Concerns.
+        
+// async function ourData(){
+//     let p = document.querySelector("p");
+//     let btn = document.querySelector("button");
+    
+//     btn.addEventListener("click" , async function() {
+        
+//         try{
+//             let [city,village] = await Promise.all([
+//             fetch('https://api.adviceslip.com/advice'),
+//             fetch('https://api.adviceslip.com/advice')   
+//         ]);
+//         let cityData = await city.json();
+//         let VillageData =  await village.json();
+//         p.innerText = cityData.slip.advice;   
+//     }
+//     catch(error){
+//         console.log(error);
+//     }
+
+// })
+// }
+// ourData();
+
+
+// With Seperation Concern here ->
+     //  ✔ 1. Function to fetch advice
+     //  ✔ 2. Function to update UI
+     //  ✔ 3. Function to handle click
+     //  ✔ 4. Initialization function
+
+async function getQuote() {
+    
     try{
-        let [city,village] = await Promise.all([
-            fetch('https://dummyjson.com/products'),
-            fetch('https://dummyjson.com/products')
-        ]);
+       let rawQuote = await fetch("https://api.adviceslip.com/advice");
+       let quote = await rawQuote.json();
 
-       let cityData = await city.json();
-       let VillageData =  await village.json()
-       cityData.products.forEach(item => {
-        console.log(item.title)
-       });
+       return {quote};
     }
     catch(error){
-      console.log(error)
+        console.log(error)
     }
-
 }
 
+function updateUi(quotes){
+    let p = document.querySelector("p");
+    p.innerText = quotes;
+}
 
-ourData()
+async function handleClick(){
+    let {quote} = await getQuote();
+    updateUi(quote.slip.advice);    
+}
+
+function initialize(){
+    let btn = document.querySelector("button");
+    btn.addEventListener("click",handleClick);
+}
+
+initialize()
 
 
-            
+
+
+
 
 
 
