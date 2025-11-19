@@ -1,5 +1,7 @@
 // What Is Architectural Thinking ? 
 
+const { useImperativeHandle } = require("react");
+
        // Architectural thinking means:
 
             // Planning before coding            
@@ -71,7 +73,7 @@ async function getQuote() {
        return {quote};
     }
     catch(error){
-        console.log(error)
+        console.log(error);
     }
 }
 
@@ -85,12 +87,21 @@ async function handleClick(){
     updateUi(quote.slip.advice);    
 }
 
-function initialize(){
+function initialize(){  
     let btn = document.querySelector("button");
     btn.addEventListener("click",handleClick);
 }
 
-initialize()
+initialize();
+
+
+
+// Custom Utilities ->
+     
+    //  A self made small tool function that does one thing very well.
+            // To avoid rewriting the same logic again and again
+            // To separate common tasks into clean, small functions 
+         
 
 
 
@@ -98,9 +109,9 @@ initialize()
 
 
 
-
-// 18 Nov work =>
+            
+// 19 Nov work =>
       
     // js  Architechture thining concept done by tommorow
-
+    // asysnchronous practice
     // TOC Intro
