@@ -1,6 +1,5 @@
 // What Is Architectural Thinking ? 
 
-const { useImperativeHandle } = require("react");
 
        // Architectural thinking means:
 
@@ -96,21 +95,45 @@ initialize();
 
 
 
-// Custom Utilities ->
+// ***  Custom Utilities *** :>
      
     //  A self made small tool function that does one thing very well.
             // To avoid rewriting the same logic again and again
             // To separate common tasks into clean, small functions 
          
 
+// Example =>
+    // insted of this :
+        //   const res = await fetch(url);
+        //   const data = await res.json();
+
+    // we create a utility function:
+      async function api(url) {
+          return (await fetch(url)).json();
+      }
+
+    // Use it anywhere:
+       const result  = await api("https://api.adviceslip.com/advice");
+       console.log(result);
+       
+       
+       
 
 
+ // ***   Shallow copy and Deep copy  ***  =>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
 
-
-
-            
-// 19 Nov work =>
+ // 19 Nov work =>
       
     // js  Architechture thining concept done by tommorow
     // asysnchronous practice
