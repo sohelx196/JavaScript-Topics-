@@ -1,5 +1,9 @@
 // What Is Architectural Thinking ? 
 
+const { use } = require("react");
+
+
+
 
        // Architectural thinking means:
 
@@ -66,7 +70,7 @@ ourData();
 async function getQuote() {
     
     try{
-       let rawQuote = await fetch("https://api.adviceslip.com/advice");
+       let rawQuote = await fetch("https://cat-fact.herokuapp.com/facts");
        let quote = await rawQuote.json();
 
        return {quote};
@@ -122,18 +126,29 @@ initialize();
 
  // ***   Shallow copy and Deep copy  ***  =>
   
+// Example of shallow copy :
+  let students = {
+       studentName : 'JACK',
+       studentFavSub : ['physics', 'coding']
+  }
+  let newStudent = {...students};
+  newStudent.studentFavSub.push('Gaming');
+  console.log("Shallow Copy" , students);
   
   
-  
-  
-  
-  
+// Example of Deep copy :
+
+  let deepCopy = JSON.parse(JSON.stringify(students))
+  deepCopy.studentFavSub.push('Communication');
+  console.log('Deep Copy' , students);
+  console.log('Deep Copy' , deepCopy);
+ 
   
   
   
 
 
- // 19 Nov work =>
+ // 21 Nov work =>
       
     // js  Architechture thining concept done by tommorow
     // asysnchronous practice
