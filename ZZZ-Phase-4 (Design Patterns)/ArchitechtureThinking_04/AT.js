@@ -1,8 +1,5 @@
 // What Is Architectural Thinking ? 
 
-const { use } = require("react");
-
-
 
 
        // Architectural thinking means:
@@ -126,6 +123,10 @@ initialize();
 
  // ***   Shallow copy and Deep copy  ***  =>
   
+// A shallow copy creates a new object, but it only copies the top-level properties
+// If you change a nested object in the copy, the original also changed.
+
+
 // Example of shallow copy :
   let students = {
        studentName : 'JACK',
@@ -136,6 +137,9 @@ initialize();
   console.log("Shallow Copy" , students);
   
   
+// A deep copy creates a completely independent clone of the object. It copies every level of the object.
+// If you change a nested object in the copy, the original remains untouched or unchanged.
+
 // Example of Deep copy :
 
   let deepCopy = JSON.parse(JSON.stringify(students))
@@ -143,9 +147,20 @@ initialize();
   console.log('Deep Copy' , students);
   console.log('Deep Copy' , deepCopy);
  
+
+  // Modern Deep Copy: structuredClone()
+     // The JSON method has limits (it can't handle functions, undefined, or Dates properly). 
+     let betterWayOfDeepClone = structuredClone(students);
+     // only deep copy me he function wgerah copy nhi kr skte isliye anothe way use krte hai..
   
-  
-  
+
+
+
+
+     
+
+
+     
 
 
  // 21 Nov work =>
