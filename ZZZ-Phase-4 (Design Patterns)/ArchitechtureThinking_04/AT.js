@@ -67,7 +67,7 @@ ourData();
 async function getQuote() {
     
     try{
-       let rawQuote = await fetch("https://cat-fact.herokuapp.com/facts");
+       let rawQuote = await fetch("https://api.adviceslip.com/advice");
        let quote = await rawQuote.json();
 
        return {quote};
@@ -87,7 +87,7 @@ async function handleClick(){
     updateUi(quote.slip.advice);    
 }
 
-function initialize(){  
+function initialize(){
     let btn = document.querySelector("button");
     btn.addEventListener("click",handleClick);
 }
