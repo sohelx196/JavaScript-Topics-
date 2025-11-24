@@ -16,14 +16,14 @@ async function Weather(city) {
         let data = await response.json();
         console.log(data)
         place.textContent = data.location.name;
-        temperature.textContent = `${data.current.temp_c} °C`;
+        temperature.textContent = `${data.current.temp_c}°C`;
         description.textContent = data.current.condition.text;
         weatherImage.src = data.current.condition.icon;
         weatherImage.classList.add('show');         
 
-    }
+    }   
     catch(error){
-        errorMsg.textContent = "Please write a proper name!";
+        errorMsg.textContent = "Not valid city";  
     }
 
 }
@@ -31,4 +31,5 @@ async function Weather(city) {
 document.querySelector("button").addEventListener("click" , function(){
    let value  = document.querySelector("input").value;
    Weather(value)
+   document.querySelector("#funny").textContent = "Mousam to aisa ho rha hai dil garden garden ho rha hai!!"
 })

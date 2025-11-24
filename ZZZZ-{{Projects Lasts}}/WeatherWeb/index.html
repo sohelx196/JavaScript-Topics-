@@ -6,12 +6,13 @@
     <title>Mousam</title>
     <style>
         
-        body { font-family: sans-serif; text-align: center; padding: 50px; }
+        body { font-family: sans-serif; text-align: center; padding: 50px;background-color: black;color: wheat;}
         .container { max-width: 400px; margin: 0 auto; border: 1px solid #ccc; padding: 20px; border-radius: 10px; }
         input { padding: 10px; width: 60%; }
         button { padding: 10px; cursor: pointer; background-color: #007BFF; color: white; border: none; }
         #weather-result { margin-top: 20px; }
         .hidden { display: none; }
+        #funny{font-style: italic;color: #ccc;}
 
         #weatherImage{
             opacity: 0;
@@ -27,10 +28,11 @@
 
     <div class="container">
         
-        <h1>Mousam Dehoo!</h1>
+        <h1>Mousam Dekhoo!</h1>
         
         <input type="text" id="city-input" placeholder="Enter city name (e.g., Khandwa)">
         <button id="search-btn">Dekh lo ab!</button>
+         
 
         
         <div id="weather-result">
@@ -42,6 +44,7 @@
 
 
             <p id="errorMsg"></p>
+            <p id="funny"></p>
         </div>
 
     </div>
