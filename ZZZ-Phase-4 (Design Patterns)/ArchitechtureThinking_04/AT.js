@@ -84,7 +84,7 @@ function updateUi(quotes){
 
 async function handleClick(){
     let {quote} = await getQuote();
-    updateUi(quote.slip.advice);    
+    updateUi(quote.slip.advice);  
 }
 
 function initialize(){
