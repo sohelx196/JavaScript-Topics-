@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mousam</title>
+    <style>
+        
+        body { font-family: sans-serif; text-align: center; padding: 50px; }
+        .container { max-width: 400px; margin: 0 auto; border: 1px solid #ccc; padding: 20px; border-radius: 10px; }
+        input { padding: 10px; width: 60%; }
+        button { padding: 10px; cursor: pointer; background-color: #007BFF; color: white; border: none; }
+        #weather-result { margin-top: 20px; }
+        .hidden { display: none; }
+
+        #weatherImage{
+            opacity: 0;
+            height: 30px;
+            width: 30px;
+        }
+        #weatherImage.show{
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <h1>Mousam Dehoo!</h1>
+        
+        <input type="text" id="city-input" placeholder="Enter city name (e.g., Khandwa)">
+        <button id="search-btn">Dekh lo ab!</button>
+
+        
+        <div id="weather-result">
+            <h2 id="city-name"></h2>
+            <p id="temperature"></p>
+            <p id="description"></p>
+            <img id="weatherImage" src="" alt="image">
+
+
+
+            <p id="errorMsg"></p>
+        </div>
+
+    </div>
+
+    <script type="module" src="weather.js"></script>
+</body>
+</html>

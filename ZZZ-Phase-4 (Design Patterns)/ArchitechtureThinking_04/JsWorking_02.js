@@ -37,7 +37,7 @@
      // After both functions complete, the call stack is empty.
 
 
-
+         
    // ** Web APIs ** :
       // Js me kuch built-in Web APIs hote hain (jaise DOM manipulation,alert, setTimeout, fetch) jo browser provide karta hai.
       // Jab koi asynchronous operation initiate hota hai (jaise setTimeout ya fetch), toh wo Web API ke paas chala jata hai, jahan wo background me execute hota hai.  
@@ -72,4 +72,3 @@
          // Timeout Completed (after 2 seconds)
 
 
-       
