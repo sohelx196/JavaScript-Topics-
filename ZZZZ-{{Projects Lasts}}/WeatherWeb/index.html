@@ -7,7 +7,7 @@
     <style>
         
         body { font-family: sans-serif; text-align: center; padding: 50px;background-color: black;color: wheat;}
-        .container { max-width: 400px; margin: 0 auto; border: 1px solid #ccc; padding: 20px; border-radius: 10px; }
+        .container { max-width: 400px; margin: 0 auto; border: 1px solid #ccc; padding: 20px; border-radius: 10px; position: relative; }
         input { padding: 10px; width: 60%; }
         button { padding: 10px; cursor: pointer; background-color: #007BFF; color: white; border: none; }
         #weather-result { margin-top: 20px; }
@@ -22,26 +22,56 @@
         #weatherImage.show{
             opacity: 1;
         }
+        /* Suggestions List Styles */
+        #suggestions {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            border: 1px solid #ccc;
+            border-top: none;
+            max-height: 150px;
+            overflow-y: auto;
+            position: absolute;
+            width: 60%; /* Match input width */
+            background-color: #333; /* Dark background */
+            z-index: 1000;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 0 0 10px 10px;
+            display: none; /* Hidden by default */
+        }
+        #suggestions li {
+            padding: 10px;
+            cursor: pointer;
+            text-align: left;
+            color: wheat;
+        }
+        #suggestions li:hover {
+            background-color: #555;
+        }
     </style>
 </head>
 <body>
+
+<div style="text-align: end;">
+    <button id="LogoutBtn">LogOut</button>
+</div>
 
     <div class="container">
         
         <h1>Mousam Dekhoo!</h1>
         
         <input type="text" id="city-input" placeholder="Enter city name (e.g., Khandwa)">
+        <ul id="suggestions"></ul>
         <button id="search-btn">Dekh lo ab!</button>
 
 
         
         <div id="weather-result">
-            <h2 id="city-name"></h2>
-            <p id="temperature"></p>
-            <p id="description"></p>
-            <img id="weatherImage" src="" alt="image">
-
-         
+            <h2 class="box" id="city-name"></h2>
+            <p class="box" id="temperature"></p>
+            <p class="box" id="description"></p>
+            <img class="box" id="weatherImage" src="" alt="image">
 
             <p id="errorMsg"></p>
             <p id="funny"></p>
@@ -49,6 +79,10 @@
 
     </div>
 
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="login.js"></script>
+    <script type="module" src="signUp.js"></script>
     <script type="module" src="weather.js"></script>
+    <script type="module" src="auth.js"></script>
 </body>
 </html>
